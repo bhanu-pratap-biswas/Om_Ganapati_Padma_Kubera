@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>404 | Page Not Found – InternSpark</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="404 Error – Page not found on InternSpark. Explore internships and career opportunities.">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Lottie -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <style>
+    :root {
+      --yellow: #FFC107;
+      --dark: #0f172a;
+      --glass: rgba(255, 255, 255, 0.08);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #1e293b, #020617);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* Background animated blobs */
+    .blob {
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      background: var(--yellow);
+      filter: blur(140px);
+      opacity: .25;
+      animation: float 10s infinite alternate;
+    }
+
+    .blob.one { top: -100px; left: -100px; }
+    .blob.two { bottom: -120px; right: -120px; animation-delay: 4s; }
+
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(40px); }
+    }
+
+    /* Glass Card */
+    .glass-card {
+      background: var(--glass);
+      backdrop-filter: blur(20px);
+      border-radius: 24px;
+      padding: 50px 40px;
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+      position: relative;
+      z-index: 2;
+    }
+
+    .error-code {
+      font-size: 96px;
+      font-weight: 800;
+      color: var(--yellow);
+      line-height: 1;
+    }
+
+    .typing {
+      font-size: 18px;
+      opacity: .9;
+      min-height: 26px;
+    }
+
+    .btn-warning {
+      font-weight: 600;
+      padding: 12px 28px;
+      border-radius: 50px;
+      box-shadow: 0 10px 30px rgba(255, 193, 7, .4);
+    }
+
+    .btn-outline-light {
+      border-radius: 50px;
+      padding: 12px 26px;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 12px;
+      width: 100%;
+      text-align: center;
+      font-size: 13px;
+      opacity: .6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Animated background -->
+  <div class="blob one"></div>
+  <div class="blob two"></div>
+
+  <!-- Main Card -->
+  <div class="glass-card">
+
+    <!-- Lottie Animation -->
+    <lottie-player
+      src="https://assets10.lottiefiles.com/packages/lf20_0yfsb3a1.json"
+      background="transparent"
+      speed="1"
+      style="width: 240px; height: 240px; margin: auto;"
+      loop
+      autoplay>
+    </lottie-player>
+
+    <div class="error-code">404</div>
+
+    <h3 class="fw-bold mt-2">Page Not Found</h3>
+
+    <p class="typing" id="typingText"></p>
+
+    <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+      <a href="/" class="btn btn-warning">
+        Go to Home
+      </a>
+      <a href="/internship.html" class="btn btn-outline-light">
+        Explore Internships
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 InternSpark Internship · All Rights Reserved
+  </footer>
+
+  <!-- Typing Effect -->
+  <script>
+    const texts = [
+      "Oops! The page you're looking for doesn’t exist.",
+      "Looks like you took a wrong turn 🚀",
+      "Let’s get you back on track with InternSpark."
+    ];
+
+    let index = 0, char = 0;
+    const typingEl = document.getElementById("typingText");
+
+    function typeEffect() {
+      if (char < texts[index].length) {
+        typingEl.innerHTML += texts[index].charAt(char);
+        char++;
+        setTimeout(typeEffect, 50);
+      } else {
+        setTimeout(eraseEffect, 2000);
+      }
+    }
+
+    function eraseEffect() {
+      if (char > 0) {
+        typingEl.innerHTML = texts[index].substring(0, char - 1);
+        char--;
+        setTimeout(eraseEffect, 30);
+      } else {
+        index = (index + 1) % texts.length;
+        setTimeout(typeEffect, 500);
+      }
+    }
+
+    typeEffect();
+  </script>
+
+</body>
+</html>
