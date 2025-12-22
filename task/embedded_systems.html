@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Embedded Systems Internship Tasks | InternSpark</title>
+
+    <!-- SEO Meta -->
+    <meta name="description"
+        content="Explore Embedded Systems Internship Tasks at InternSpark. Learn microcontrollers, embedded C, Arduino, sensors, IoT basics, communication protocols, real-time systems, and hardware-software integration through hands-on projects.">
+
+    <meta name="keywords"
+        content="Embedded Systems Internship, Embedded Internship Tasks, Embedded C Internship India, Arduino Internship, IoT Internship Projects, Microcontroller Internship, InternSpark Internship">
+
+    <meta name="author" content="InternSpark | Alfido Tech">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Embedded Systems Internship Tasks | InternSpark">
+    <meta property="og:description"
+        content="Hands-on Embedded Systems internship tasks covering microcontrollers, embedded C, Arduino, IoT basics, sensors, and real-time systems. Build real-world embedded projects with InternSpark.">
+    <meta property="og:url" content="https://www.internspark.in/task/embedded_systems.html">
+    <meta property="og:image" content="https://www.internspark.in/img/og-embedded.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Embedded Systems Internship Tasks | InternSpark">
+    <meta name="twitter:description"
+        content="Learn Embedded Systems with real-world internship tasks at InternSpark. Work on microcontrollers, IoT devices, and hardware-based automation projects.">
+    <meta name="twitter:image" content="https://www.internspark.in/img/og-embedded.png">
+
+
+
+    <!-- Favicon -->
+    <link rel="icon" href="/img/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+    <link rel="apple-touch-icon" href="/img/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f0f23">
+
+
+
+
+    <!-- ================= SEO & UI ================= -->
+    <meta name="google" content="notranslate">
+    <meta name="theme-color" content="#0f0f23">
+
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://internspark.in/css/style.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-519NNPN4L1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-519NNPN4L1');
+    </script>
+    <style>
+        /* ================= BASE ================= */
+        body {
+            font-family: 'Heebo', sans-serif;
+            padding-top: 80px;
+        }
+
+        /* ================= WHATSAPP BUTTON ================= */
+        #whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+        }
+
+        #whatsapp-btn img {
+            width: 65px;
+        }
+
+        /* ================= ANIMATIONS ================= */
+        @keyframes pop {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            50% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* ================= HERO ================= */
+        .hero {
+            position: relative;
+            padding: 120px 20px 80px;
+            background: linear-gradient(135deg, #0f0f23, #1b1f3b);
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 2.6rem);
+            font-weight: 700;
+        }
+
+        .hero p {
+            opacity: 0.85;
+            font-size: 1.05rem;
+        }
+
+        /* ================= CARD ================= */
+        .card-custom {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(18px);
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #fff;
+        }
+
+        .card-custom h4,
+        .card-custom h5,
+        .card-custom p strong {
+            color: #FFC107;
+        }
+
+        .card-custom hr {
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .card-custom ul,
+        .card-custom ol {
+            padding-left: 1.2rem;
+        }
+
+        .card-custom li {
+            margin-bottom: 6px;
+        }
+
+        .card-custom a {
+            color: #FFC107;
+            text-decoration: none;
+        }
+
+        .card-custom a:hover {
+            text-decoration: underline;
+        }
+
+        /* ================= BADGES ================= */
+        .badge-tech {
+            background: rgba(255, 193, 7, 0.15);
+            color: #FFC107;
+            border: 1px solid rgba(255, 193, 7, 0.35);
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        /* ================= ACCORDION ================= */
+        .accordion-item {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 14px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .accordion-button {
+            background: transparent;
+            color: #fff;
+            font-weight: 600;
+            box-shadow: none;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background: rgba(255, 193, 7, 0.12);
+            color: #FFC107;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+
+        .accordion-button::after {
+            filter: invert(1);
+        }
+
+        .accordion-body {
+            background: rgba(0, 0, 0, 0.25);
+            color: #ddd;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        /* ================= TASK NUMBER ================= */
+        .task-num {
+            width: 36px;
+            height: 36px;
+            min-width: 36px;
+            border-radius: 50%;
+            background: #FFC107;
+            color: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        /* ================= BUTTON ================= */
+        .btn-primary {
+            background: #FFC107;
+            border: none;
+            color: #111;
+            font-weight: 700;
+            padding: 10px 22px;
+            border-radius: 50px;
+        }
+
+        .btn-primary:hover {
+            background: #e0a800;
+        }
+
+        /* ================= LOADING ================= */
+        .loading-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 18px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(14px);
+            border-radius: 12px;
+            color: #FFC107;
+        }
+
+        .spinner {
+            width: 22px;
+            height: 22px;
+            border: 3px solid rgba(255, 193, 7, 0.25);
+            border-top-color: #FFC107;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        /* ================= MOBILE ================= */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 100px 15px 60px;
+            }
+
+            .accordion-button {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* ================= HERO ================= */
+        .hero-header {
+            position: relative;
+            padding: 100px 20px;
+            text-align: center;
+            background: url('https://internspark.in/img/banar1.jpg') center/cover no-repeat;
+
+            color: #fff;
+        }
+
+        .hero-header::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            pointer-events: none;
+            /* 🔥 FIXED: button clickable */
+        }
+
+        .hero-header h1,
+        .hero-header p,
+        .hero-header a {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-header h1 {
+            font-size: clamp(2.2rem, 5vw, 2.8rem);
+            font-weight: 700;
+        }
+
+        .hero-header p {
+            opacity: 0.85;
+        }
+    </style>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+
+</head>
+
+
+<body>
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-black bg-opacity-75 backdrop-blur py-2 shadow">
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center fw-bold fs-3" href="index.html">
+                <img src="https://internspark.in/img/navbar-logo.png" alt="InternSpark Logo" height="70" class="me-2">
+                <!-- <span style="color:var(--yellow)">Intern<span style="color:#fff">Spark</span> </span> -->
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler bg-warning border-0 p-2 rounded" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <i class="fas fa-bars text-dark fs-5"></i>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" href="https://internspark.in/index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">
+                            Internship
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark rounded-4">
+                            <li><a class="dropdown-item" href="https://internspark.in/internship.html">Internship
+                                    Apply</a></li>
+
+                            <li><a class="dropdown-item" href="https://internspark.in/internProfile.html">
+                                    Intern Profile
+                                </a></li>
+                            <li><a class="dropdown-item" href="https://internspark.in/task.html">Tasks</a></li>
+
+                            <li><a class="dropdown-item" href="https://internspark.in/submission.html">Task
+                                    Submission</a></li>
+                            <li><a class="dropdown-item" href="https://internspark.in/certificate.html">Certificate</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="https://internspark.in/assessment.html">Assessment</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="https://internspark.in/Contact.html">Contact Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="https://internspark.in/about.html">About</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark rounded-4">
+                            <li><a class="dropdown-item" href="offer-letter.html">Offer Letter</a></li>
+                            <li><a class="dropdown-item" href="lor.html">Letter of Recommendation</a></li>
+                            <li><a class="dropdown-item" href="report-card.html">Report Card</a></li>
+                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="code-editor.html">Code Editor</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-warning fw-bold px-4 py-2 rounded-pill"
+                            href="https://internspark.in/internship.html">
+                            Apply Now
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-header">
+        <div class="container text-center">
+            <h1>
+                <span style="color: yellow;">Embedded Systems — Internship Tasks</span>
+            </h1>
+
+            <p class="lead text-white">
+                Objective, Features, Technologies and tasks to learn Embedded Systems fundamentals and practical
+                skills.
+            </p>
+        </div>
+    </section>
+
+
+    <main class="container my-5">
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="card card-custom p-4">
+                    <h4 class="mb-3">Objective</h4>
+                    <p>
+                        Learn the fundamentals of embedded systems design through hands-on tasks: microcontroller
+                        programming,
+                        interfacing sensors and actuators, real-time control, and simple IoT connectivity. By the end of
+                        these
+                        tasks interns will be able to design, implement, and test small embedded projects and document
+                        results.
+                    </p>
+
+                    <hr>
+
+                    <h4 class="mb-3">Features</h4>
+                    <ul>
+                        <li>Hands-on microcontroller programming (Arduino / STM32 / ESP32)</li>
+                        <li>Sensor & actuator interfacing (GPIO, ADC, PWM, I2C, SPI, UART)</li>
+                        <li>Basic real-time behavior using timers and interrupts</li>
+                        <li>Simple data logging and visualization (serial / web)</li>
+                        <li>Optional wireless connectivity (Wi‑Fi / Bluetooth) for IoT workflows</li>
+                    </ul>
+
+                    <hr>
+
+                    <h4 class="mb-3">Technologies</h4>
+                    <div class="mb-3">
+                        <span class="badge badge-tech px-3 py-2 me-2">C / C++</span>
+                        <span class="badge badge-tech px-3 py-2 me-2">Arduino IDE / PlatformIO</span>
+                        <span class="badge badge-tech px-3 py-2 me-2">ESP32 / STM32 / AVR</span>
+                        <span class="badge badge-tech px-3 py-2">I2C, SPI, UART</span>
+                    </div>
+
+                    <hr>
+
+                    <h4 class="mb-3">Tasks (4)</h4>
+
+                    <!-- Tasks Accordion -->
+                    <div class="accordion" id="tasksAccordion">
+
+                        <!-- Task 1 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#taskOne" aria-expanded="false" aria-controls="taskOne">
+                                    <div class="d-flex align-items-center me-3">
+                                        <div class="task-num me-3">1</div>
+                                    </div>
+                                    Task 1 — Temperature Monitoring & LCD Display
+                                </button>
+                            </h2>
+                            <div id="taskOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#tasksAccordion">
+                                <div class="accordion-body">
+                                    <h6>Goal</h6>
+                                    <p>Read temperature from a sensor and display current value on a 16x2 LCD. Log
+                                        readings over serial.</p>
+
+                                    <h6>Requirements</h6>
+                                    <ul>
+                                        <li>Hardware: Arduino UNO, LM35/DS18B20, 16x2 I2C LCD, breadboard, wires</li>
+                                        <li>Software: Arduino IDE, <code>LiquidCrystal_I2C</code> (or equivalent)</li>
+                                    </ul>
+
+                                    <h6>Deliverables</h6>
+                                    <ol>
+                                        <li>Working circuit & Arduino sketch.</li>
+                                        <li>Short video (30–60s) showing live reading on LCD.</li>
+                                        <li>One-page README with wiring diagram and explanation.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Task 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#taskTwo" aria-expanded="false" aria-controls="taskTwo">
+                                    <div class="d-flex align-items-center me-3">
+                                        <div class="task-num me-3">2</div>
+                                    </div>
+                                    Task 2 — Motor Control with PWM & Obstacle Detection
+                                </button>
+                            </h2>
+                            <div id="taskTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#tasksAccordion">
+                                <div class="accordion-body">
+                                    <h6>Goal</h6>
+                                    <p>Control DC motor speed using PWM and stop when an ultrasonic sensor detects an
+                                        obstacle.</p>
+
+                                    <h6>Requirements</h6>
+                                    <ul>
+                                        <li>Hardware: Arduino/ESP32, L293D or motor driver, DC motor, HC-SR04 ultrasonic
+                                            sensor</li>
+                                        <li>Software: Arduino IDE, use hardware PWM pins</li>
+                                    </ul>
+
+                                    <h6>Deliverables</h6>
+                                    <ol>
+                                        <li>Code implementing PWM speed control and obstacle stop.</li>
+                                        <li>Wiring diagram and brief test results (distance vs response).</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Task 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#taskThree" aria-expanded="false" aria-controls="taskThree">
+                                    <div class="d-flex align-items-center me-3">
+                                        <div class="task-num me-3">3</div>
+                                    </div>
+                                    Task 3 — Data Logger: Sensor → SD Card
+                                </button>
+                            </h2>
+                            <div id="taskThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#tasksAccordion">
+                                <div class="accordion-body">
+                                    <h6>Goal</h6>
+                                    <p>Collect sensor data (e.g., temperature and light) and save timestamped entries to
+                                        an SD card (CSV).</p>
+
+                                    <h6>Requirements</h6>
+                                    <ul>
+                                        <li>Hardware: Arduino with SPI, SD card module, RTC module (DS1307/DS3231)
+                                            optional</li>
+                                        <li>Software: <code>SD.h</code>, <code>SPI.h</code>, optional
+                                            <code>RTClib</code>
+                                        </li>
+                                    </ul>
+
+                                    <h6>Deliverables</h6>
+                                    <ol>
+                                        <li>CSV file from SD showing at least 100 samples.</li>
+                                        <li>Code and explanation of sampling rate and power considerations.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Task 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#taskFour" aria-expanded="false" aria-controls="taskFour">
+                                    <div class="d-flex align-items-center me-3">
+                                        <div class="task-num me-3">4</div>
+                                    </div>
+                                    Task 4 — Simple IoT: ESP32 Web Dashboard
+                                </button>
+                            </h2>
+                            <div id="taskFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#tasksAccordion">
+                                <div class="accordion-body">
+                                    <h6>Goal</h6>
+                                    <p>Create a basic web dashboard served by an ESP32 that shows live sensor data and
+                                        allows toggling a digital output (LED/relay).</p>
+
+                                    <h6>Requirements</h6>
+                                    <ul>
+                                        <li>Hardware: ESP32, sensor (e.g., DHT11/DHT22), LED/relay</li>
+                                        <li>Software: ESP32 core for Arduino, <code>WiFi.h</code>,
+                                            <code>ESPAsyncWebServer</code> or <code>WebServer</code>
+                                        </li>
+                                    </ul>
+
+                                    <h6>Deliverables</h6>
+                                    <ol>
+                                        <li>ESP32 sketch with embedded HTML/JS for dashboard.</li>
+                                        <li>Screenshot of dashboard and short demo notes.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <hr>
+                    <!-- Task Documentation & Submission Instructions -->
+                    <h4>How to Submit Your Tasks</h4>
+                    <ol>
+                        <li>
+                            <strong>For each task:</strong>
+                            <ul>
+                                <li>Create a separate document (DOC, DOCX, or PDF) for <b>each task</b> (Task 1, Task 2,
+                                    Task 3, Task 4).</li>
+                                <li>Add all required screenshots, code snippets, commands, and links as per the
+                                    deliverables.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Upload your documents:</strong>
+                            <ul>
+                                <li>Upload each task document to <b>Google Drive</b> or <b>GitHub</b> (create a public
+                                    repository or shareable folder).</li>
+                                <li>Make sure the sharing permissions allow anyone with the link to view your files.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Submit your links:</strong>
+                            <ul>
+                                <li>Copy the public links for each task document.</li>
+                                <li>Go to the <a href="https://www.alfidotech.com/submission.html" target="_blank">Task
+                                        Submission</a> page.</li>
+                                <li>Paste your document links in the submission form, clearly mentioning the task number
+                                    for each link.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p class="text-success"><b>Tip:</b> Organize your files and links clearly for faster review and
+                        feedback!</p>
+                    <div class="text-center mt-5">
+                        <a href="/submission.html" target="_blank">
+                            <button class="btn btn-primary btn-sm">Submit Your Task</button></a>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                        <small class="text-muted">Suggested duration: 4–6 weeks for the full set (can be separated into
+                            smaller milestones).</small>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card card-custom p-3">
+                    <h5>Quick Resources</h5>
+                    <ul>
+                        <li><a href="https://www.arduino.cc/" target="_blank">Arduino</a></li>
+                        <li><a href="https://docs.espressif.com/" target="_blank">ESP32 Docs</a></li>
+                        <li><a href="https://platformio.org/" target="_blank">PlatformIO</a></li>
+                        <li><a href="https://www.arduino.cc/reference/en/" target="_blank">Arduino Reference</a></li>
+                    </ul>
+                </div>
+
+                <div class="card card-custom p-3 mt-3">
+                    <h6>Evaluation Checklist</h6>
+                    <ol>
+                        <li>Code compiles and runs.</li>
+                        <li>Proper wiring and safety checks.</li>
+                        <li>Documentation (README + wiring diagram).</li>
+                        <li>Short demo (video or GIF) or live demo session.</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="/submission.html" target="_blank">
+                    <button class="btn btn-primary btn-sm">Submit Your Task</button></a>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+    <footer class="pt-5 pb-4 mt-5 position-relative">
+        <div class="container">
+            <div class="row gy-4">
+
+                <!-- Brand -->
+                <div class="col-lg-4 col-md-6">
+                    <img src="https://internspark.in/img/navbar-logo.png" alt="InternSpark Logo" class="footer-logo">
+
+                    <p class="text-secondary mt-3">
+                        InternSpark is an online internship & skill development platform
+                        powered by Alfido Tech.
+                    </p>
+
+                    <!-- Social Media -->
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="https://www.linkedin.com/company/internspark" target="_blank" class="footer-social"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/internspark" target="_blank" class="footer-social"
+                            aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/internspark" target="_blank" class="footer-social" aria-label="Twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@internspark" target="_blank" class="footer-social"
+                            aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="domains.html" class="footer-link">Domains</a></li>
+                        <li><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+                        <li><a href="/sitemap.xml" class="footer-link">Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Legal</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="/privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="footer-link">Terms & Conditions</a></li>
+                        <li><a href="/refund.html" class="footer-link">Refund Policy</a></li>
+                        <li><a href="/disclaimer.html" class="footer-link">Disclaimer</a></li>
+                        <li><a href="/accessibility.html" class="footer-link">Accessibility</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Address -->
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Contact & Address</h6>
+
+                    <p class="text-secondary small mb-2">
+                        <i class="fas fa-map-marker-alt me-2 text-warning"></i>
+                        Bengaluru, Karnataka – 560095, India
+                    </p>
+
+                    <p class="text-secondary small mb-2">
+                        <i class="fas fa-envelope me-2 text-warning"></i>
+                        <a href="mailto:info@internspark.in" class="footer-link">
+                            info@internspark.in
+                        </a>
+                    </p>
+
+                    <p class="text-secondary small mb-2">
+                        <i class="fas fa-phone me-2 text-warning"></i>
+                        <a href="tel:+919977465250" class="footer-link">
+                            +91 99774 65250
+                        </a>
+                    </p>
+
+                    <p class="text-secondary small mb-0">
+                        <i class="fas fa-headset me-2 text-warning"></i>
+                        <a href="mailto:support@internspark.in" class="footer-link">
+                            support@internspark.in
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+
+            <hr class="my-4 border-secondary">
+
+            <!-- Bottom Bar -->
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center">
+                <p class="mb-2 mb-md-0 text-secondary small">
+                    © 2025 InternSpark | Powered by
+                    <a href="https://alfidotech.com" target="_blank">Alfido Tech</a>
+                </p>
+                <p class="text-secondary small mb-0">
+                    Made with ❤️ for learners
+                </p>
+            </div>
+
+            <!-- Legal Safe Disclaimer -->
+            <p class="text-secondary small text-center mt-3">
+                InternSpark is a private skill-development initiative and is not affiliated
+                with AICTE or any government organization.
+            </p>
+        </div>
+    </footer>
+    <!-- ================= Footer End ================= -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+</body>
+
+</html>
