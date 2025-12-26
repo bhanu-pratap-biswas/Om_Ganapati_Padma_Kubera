@@ -2,40 +2,39 @@
 <html lang="en">
 
 <head>
-    <!-- Basic Meta -->
+
     <!-- Basic Meta -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>React.js Developer Skill Assessment | InternSpark</title>
+    <title>Android Development Skill Assessment | InternSpark</title>
 
     <meta name="description"
-        content="Evaluate React.js developer skills with InternSpark’s React.js Skill Assessment. Designed for recruiters to assess React fundamentals, Hooks, state management, component architecture, and performance optimization.">
+        content="Evaluate Android Development skills with InternSpark’s Android Skill Assessment. Designed for recruiters to assess Android fundamentals, Kotlin/Java programming, activities, fragments, UI layouts, app lifecycle, networking, and performance best practices.">
 
     <meta name="keywords"
-        content="React.js Developer Skill Assessment, React Developer Test, React.js Quiz, React Hooks Assessment, Frontend React Skill Test, InternSpark Assessment">
+        content="Android Development Skill Assessment, Android Developer Test, Kotlin Android Quiz, Android App Development Test, Mobile App Development Assessment, InternSpark Assessment">
 
     <meta name="author" content="InternSpark">
     <meta name="robots" content="index, follow">
 
-    <link rel="canonical" href="https://internspark.in/quiz/reactjs.html">
+    <link rel="canonical" href="https://internspark.in/quiz/android.html">
 
     <!-- Open Graph (Facebook / LinkedIn / WhatsApp) -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="React.js Developer Skill Assessment | InternSpark">
+    <meta property="og:title" content="Android Development Skill Assessment | InternSpark">
     <meta property="og:description"
-        content="Screen React.js developers with a structured assessment covering React fundamentals, Hooks, component lifecycle, state management, and performance best practices.">
-    <meta property="og:url" content="https://internspark.in/quiz/reactjs.html">
-    <meta property="og:image" content="https://internspark.in/img/domains/reactjs.png">
+        content="Screen Android developers with a structured assessment covering Kotlin/Java, activities, fragments, layouts, app lifecycle management, networking, and real-world mobile application best practices.">
+    <meta property="og:url" content="https://internspark.in/quiz/android.html">
+    <meta property="og:image" content="https://internspark.in/img/domains/android.png">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="React.js Developer Skill Assessment | InternSpark">
+    <meta name="twitter:title" content="Android Development Skill Assessment | InternSpark">
     <meta name="twitter:description"
-        content="Hire faster with InternSpark’s React.js Developer Skill Assessment. Test React fundamentals, Hooks, state management, and real-world application skills.">
-    <meta name="twitter:image" content="https://internspark.in/img/domains/reactjs.png">
-
+        content="Hire Android developers faster with InternSpark’s Android Skill Assessment. Test Android fundamentals, Kotlin/Java, UI components, lifecycle management, and real-world app development skills.">
+    <meta name="twitter:image" content="https://internspark.in/img/domains/android.png">
 
 
     <!-- Favicon -->
@@ -383,28 +382,33 @@
     </nav>
 
     <!-- Hero -->
+    <!-- Hero -->
     <section class="hero-header">
         <div class="container text-center">
-            <h1>
-                <span style="color: yellow;">React.js Developer — Skill Assessment</span>
+            <h1 class="fw-bold mb-3">
+                <span style="color:#FFC107;">Android Development — Skill Assessment</span>
             </h1>
 
-            <p class="lead text-white">
-                Demonstrate your React.js proficiency through a comprehensive skill assessment
-                designed to evaluate <strong>React fundamentals, Hooks, state management,
-                    component architecture, performance optimization</strong>, and real-world
-                application best practices.
+            <p class="lead text-white opacity-85">
+                Demonstrate your Android development expertise through a comprehensive skill assessment
+                designed to evaluate <strong>Android fundamentals, Kotlin/Java programming, activities & fragments,
+                    layouts and UI components, intents & services</strong>,
+                app lifecycle management, performance optimization, and real-world mobile application best practices.
             </p>
-
         </div>
     </section>
+
+
+
+
+
 
     <!-- QUIZ -->
     <section class="container pb-5">
         <div class="quiz-box mx-auto">
 
             <h2 class="text-center mb-4">
-                React.js Developer <span class="text-warning">Assessment</span>
+                Android Development <span class="text-warning">Assessment</span>
             </h2>
             <div class="quiz-timer-bar">
                 <div>
@@ -441,149 +445,164 @@
         /* ================= QUESTIONS ================= */
         const questions = [
             {
-                q: "What is the primary purpose of React?",
+                q: "What is the primary purpose of Android app development?",
                 options: [
-                    "Server-side scripting",
-                    "Building user interfaces",
-                    "Managing databases",
-                    "Handling HTTP requests"
+                    "Design websites",
+                    "Build applications for Android devices",
+                    "Manage servers",
+                    "Create desktop software only"
                 ],
                 answer: 1
             },
             {
-                q: "What is JSX in React?",
+                q: "Which programming language is officially supported for Android development?",
+                options: ["Python", "Kotlin", "PHP", "Ruby"],
+                answer: 1
+            },
+            {
+                q: "What is Android Studio?",
                 options: [
-                    "A JavaScript framework",
-                    "A syntax extension for JavaScript",
-                    "A CSS preprocessor",
-                    "A database query language"
+                    "A mobile operating system",
+                    "An IDE for Android app development",
+                    "A database tool",
+                    "A UI framework only"
                 ],
                 answer: 1
             },
             {
-                q: "Which hook is used to manage state in functional components?",
-                options: ["useEffect", "useContext", "useState", "useRef"],
-                answer: 2
-            },
-            {
-                q: "What does the useEffect hook replace in class components?",
+                q: "What is an Activity in Android?",
                 options: [
-                    "render()",
-                    "componentDidMount, componentDidUpdate, componentWillUnmount",
-                    "constructor()",
-                    "shouldComponentUpdate()"
+                    "A background service",
+                    "A single screen with a user interface",
+                    "A database table",
+                    "A system process"
                 ],
                 answer: 1
             },
             {
-                q: "Which prop is required when rendering lists in React?",
-                options: ["index", "id", "key", "value"],
-                answer: 2
-            },
-            {
-                q: "What is the virtual DOM?",
-                options: [
-                    "A copy of the browser DOM stored in memory",
-                    "A real DOM API",
-                    "A server-side DOM",
-                    "A database structure"
-                ],
-                answer: 0
-            },
-            {
-                q: "Which hook is used to access DOM elements directly?",
-                options: ["useState", "useEffect", "useMemo", "useRef"],
+                q: "Which file defines the UI layout in Android?",
+                options: ["Main.java", "AndroidManifest.xml", "layout.xml", "res/layout XML files"],
                 answer: 3
             },
             {
-                q: "What happens when state is updated in React?",
+                q: "What is the purpose of AndroidManifest.xml?",
                 options: [
-                    "The page reloads",
-                    "The component re-renders",
-                    "Only variables update",
-                    "Nothing happens"
+                    "Store app UI designs",
+                    "Declare app components and permissions",
+                    "Handle database connections",
+                    "Manage network calls"
                 ],
                 answer: 1
             },
             {
-                q: "Which hook is used to optimize expensive calculations?",
-                options: ["useCallback", "useEffect", "useMemo", "useRef"],
+                q: "Which layout arranges UI elements vertically or horizontally?",
+                options: ["RelativeLayout", "ConstraintLayout", "LinearLayout", "FrameLayout"],
                 answer: 2
             },
             {
-                q: "What is prop drilling in React?",
+                q: "What is a Fragment in Android?",
                 options: [
-                    "Passing props through multiple levels",
-                    "Accessing props directly",
-                    "Storing props in state",
-                    "Validating props"
+                    "A database object",
+                    "A reusable portion of UI within an Activity",
+                    "A background thread",
+                    "A system service"
+                ],
+                answer: 1
+            },
+            {
+                q: "Which component runs tasks in the background without UI?",
+                options: ["Activity", "Fragment", "Service", "Intent"],
+                answer: 2
+            },
+            {
+                q: "What is an Intent used for?",
+                options: [
+                    "Store user data",
+                    "Start activities or communicate between components",
+                    "Design layouts",
+                    "Handle database queries"
+                ],
+                answer: 1
+            },
+            {
+                q: "Which file extension is used for Android layout resources?",
+                options: [".java", ".kt", ".xml", ".json"],
+                answer: 2
+            },
+            {
+                q: "What is RecyclerView used for?",
+                options: [
+                    "Database storage",
+                    "Displaying large lists efficiently",
+                    "Handling background services",
+                    "Managing permissions"
+                ],
+                answer: 1
+            },
+            {
+                q: "Which API level represents Android version compatibility?",
+                options: [
+                    "SDK Version",
+                    "Gradle Version",
+                    "Java Version",
+                    "Build Tools"
                 ],
                 answer: 0
             },
             {
-                q: "Which feature helps avoid prop drilling?",
-                options: ["useState", "Context API", "Fragments", "Refs"],
-                answer: 1
-            },
-            {
-                q: "Which hook memoizes functions to prevent unnecessary re-renders?",
-                options: ["useMemo", "useCallback", "useEffect", "useState"],
-                answer: 1
-            },
-            {
-                q: "What is the correct way to update state based on previous state?",
+                q: "What is Gradle used for in Android projects?",
                 options: [
-                    "setState(value)",
-                    "setState(prev => prev + 1)",
-                    "state = state + 1",
-                    "updateState()"
+                    "UI design",
+                    "Build automation and dependency management",
+                    "Database management",
+                    "Testing only"
                 ],
                 answer: 1
             },
             {
-                q: "Which statement about React keys is correct?",
+                q: "Which storage option is best for small key-value pairs?",
                 options: [
-                    "Keys must be globally unique",
-                    "Keys help React identify elements efficiently",
-                    "Keys are optional",
-                    "Keys affect styling"
+                    "SQLite",
+                    "SharedPreferences",
+                    "Firebase",
+                    "Room Database"
                 ],
                 answer: 1
             },
             {
-                q: "What does React.StrictMode do?",
-                options: [
-                    "Improves performance",
-                    "Adds CSS validation",
-                    "Highlights potential problems in development",
-                    "Prevents re-rendering"
-                ],
-                answer: 2
-            },
-            {
-                q: "Which lifecycle phase is used for side effects?",
-                options: ["Rendering", "Commit", "Reconciliation", "Unmounting"],
+                q: "Which library is commonly used for network requests in Android?",
+                options: ["JUnit", "Retrofit", "Glide", "Room"],
                 answer: 1
             },
             {
-                q: "Which library is commonly used for routing in React applications?",
-                options: ["Axios", "Redux", "React Router", "Formik"],
-                answer: 2
-            },
-            {
-                q: "What is the purpose of React Fragments?",
+                q: "What does APK stand for?",
                 options: [
-                    "To add CSS styles",
-                    "To group elements without extra DOM nodes",
-                    "To manage state",
-                    "To handle routing"
+                    "Android Package Kit",
+                    "Android Program Key",
+                    "Application Process Kernel",
+                    "Advanced Package Kit"
                 ],
-                answer: 1
-            },
-            {
-                q: "Which tool is commonly used to manage global state in large React apps?",
-                options: ["Redux", "Webpack", "Babel", "ESLint"],
                 answer: 0
+            },
+            {
+                q: "Which practice improves Android app performance?",
+                options: [
+                    "Running heavy tasks on main thread",
+                    "Using background threads for long operations",
+                    "Ignoring lifecycle methods",
+                    "Using large images everywhere"
+                ],
+                answer: 1
+            },
+            {
+                q: "Which testing type checks UI interactions in Android?",
+                options: [
+                    "Unit testing",
+                    "Integration testing",
+                    "UI / Instrumentation testing",
+                    "Load testing"
+                ],
+                answer: 2
             }
         ];
 
