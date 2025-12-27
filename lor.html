@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>LOR Generator | InternSpark Letter of Recommendation</title>
+
+    <!-- SEO Meta -->
+    <meta name="description"
+        content="Generate and download your InternSpark Letter of Recommendation (LOR) instantly. Create a verified, A4-ready LOR PDF with official signatures, QR verification, and professional formatting.">
+
+    <meta name="keywords"
+        content="InternSpark LOR, Letter of Recommendation Generator, Internship LOR PDF, Recommendation Letter for Internship, InternSpark LOR Generator, Alfido Tech LOR">
+
+    <meta name="author" content="InternSpark | Alfido Tech">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="LOR Generator | InternSpark">
+    <meta property="og:description"
+        content="Create your official InternSpark Letter of Recommendation instantly. Download a verified, single-page A4 LOR PDF with signatures and QR verification.">
+    <meta property="og:url" content="https://www.internspark.in/lor.html">
+    <meta property="og:image" content="https://www.internspark.in/img/og-lor.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="InternSpark LOR Generator">
+    <meta name="twitter:description"
+        content="Generate and download your InternSpark Letter of Recommendation in seconds. A4-ready, verified, and professional PDF.">
+    <meta name="twitter:image" content="https://www.internspark.in/img/og-lor.png">
+
+
+
+    <!-- Favicon -->
+    <link rel="icon" href="/img/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+    <link rel="apple-touch-icon" href="/img/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f0f23">
+
+
+    <!-- ================= SEO & UI ================= -->
+    <meta name="google" content="notranslate">
+    <meta name="theme-color" content="#0f0f23">
+
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-519NNPN4L1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-519NNPN4L1');
+    </script>
+    <style>
+        /* =====================================================
+   InternSpark – Offer Letter Page (FINAL CLEAN CSS)
+   HTML-only | style.css untouched
+   Fixes: PDF split, black bar, logo cut, watermark overlap
+===================================================== */
+
+        /* ---------- PAGE BASE ---------- */
+        body.offer-letter-page {
+            background: var(--dark);
+            color: #fff;
+        }
+
+        /* ---------- PAGE WRAPPER ---------- */
+        .page-wrapper {
+            max-width: 1140px;
+            margin: 30px auto 60px;
+            padding: 0 15px;
+        }
+
+        /* ---------- TOP DOWNLOAD BAR ---------- */
+        .top-download-bar {
+            position: sticky;
+            top: 84px;
+            z-index: 1000;
+            background: linear-gradient(90deg, #0f0f23, #1a1a2e);
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+            padding: 10px 0;
+        }
+
+        /* ---------- INFO + FORM GRID ---------- */
+        .info-form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+        }
+
+        @media (max-width: 900px) {
+            .info-form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ---------- CARDS ---------- */
+        .info-card,
+        .form-card {
+            background: rgba(255, 255, 255, .08);
+            backdrop-filter: blur(18px);
+            border-radius: 22px;
+            border: 1px solid rgba(255, 255, 255, .15);
+            padding: 24px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, .45);
+        }
+
+        /* ---------- HEADINGS ---------- */
+        .page-header h1,
+        .form-card h2 {
+            color: var(--yellow);
+        }
+
+        /* ---------- FORM ELEMENTS ---------- */
+        .form-control,
+        .form-select {
+            background: rgba(255, 255, 255, .12) !important;
+            border: 1px solid rgba(255, 255, 255, .25) !important;
+            color: #fff !important;
+            border-radius: 14px;
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, .6);
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: var(--yellow) !important;
+            box-shadow: 0 0 0 .2rem rgba(255, 193, 7, .25) !important;
+        }
+
+        .form-select option {
+            background: #0f0f23;
+            color: #fff;
+        }
+
+        /* ---------- BUTTONS ---------- */
+        .btn-primary-main,
+        #downloadButton {
+            background: linear-gradient(135deg, #ffc107, #ffb300);
+            border: none;
+            color: #000;
+            font-weight: 700;
+            border-radius: 999px;
+        }
+
+        .btn-primary-main:hover,
+        #downloadButton:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(255, 193, 7, .45);
+        }
+
+        /* =====================================================
+   OFFER LETTER (A4 SAFE LAYOUT)
+===================================================== */
+
+        /* ---------- LETTER OUTER ---------- */
+        .letter-outer {
+            margin-top: 32px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* ---------- LETTER PAPER ---------- */
+        .letter-paper {
+            width: 100%;
+            max-width: 820px;
+            background: #f7f7fb;
+            border-radius: 24px;
+            padding: 18px;
+            border: 1px solid #e3e7f3;
+        }
+
+        @media (max-width: 768px) {
+            .letter-paper {
+                padding: 10px;
+                border-radius: 18px;
+            }
+        }
+
+        /* ---------- A4 PAGE ---------- */
+        #offerLetter {
+            position: relative;
+            width: 794px;
+            max-width: 100%;
+            min-height: 1123px;
+            margin: 0 auto;
+            display: flex;
+            overflow: visible;
+            /* 🔥 prevents PDF clipping */
+        }
+
+        /* ---------- LETTER INNER ---------- */
+        .letter-inner {
+            position: relative;
+            z-index: 1;
+            background: #fff;
+            color: #000;
+            border: 2px solid #ffffff;
+            border-radius: 18px;
+            padding: 26px 40px 40px;
+            /* bottom buffer for PDF */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            /* 🔥 FIXED */
+            width: 100%;
+            min-height: 100%;
+        }
+
+        /* ---------- WATERMARK ---------- */
+        .watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.08;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .watermark img {
+            max-width: 420px;
+            width: 100%;
+        }
+
+        /* ---------- HEADER ---------- */
+        /* Header */
+        .letter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 8px;
+        }
+
+        .letter-header img {
+            max-width: 220px;
+            height: auto;
+        }
+
+        .letter-contact {
+            text-align: right;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .letter-contact p {
+            margin-bottom: 2px;
+        }
+
+        .letter-contact b {
+            color: var(--text-main);
+        }
+
+        /* ---------- DIVIDER ---------- */
+        .top-divider {
+            border-top: 2px solid #000;
+            margin: 6px 0 14px;
+        }
+
+        /* ---------- CONTENT ---------- */
+        .title {
+            text-align: center;
+            font-size: 22px;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin: 10px 0 16px;
+        }
+
+        .content {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #2f3b4c;
+        }
+
+        .content p {
+            margin-bottom: 8px;
+        }
+
+        /* ---------- DETAILS ---------- */
+        .internship-details {
+            font-size: 13px;
+            margin: 10px 0;
+        }
+
+        .letter-footer-text {
+            font-size: 13px;
+            margin-top: 14px;
+        }
+
+        /* ---------- SIGNATURES (NO PAGE BREAK) ---------- */
+        .signature-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 22px;
+            position: relative;
+            z-index: 2;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .signature-item,
+        .signature-item1 {
+            text-align: center;
+            font-size: 11px;
+        }
+
+        .signature-item img {
+            max-height: 90px;
+        }
+
+        .signature-item1 img {
+            max-height: 85px;
+        }
+
+        /* ---------- INFO LOGO ---------- */
+        .info-logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 10px;
+        }
+
+        .info-logo img {
+            max-width: 170px;
+        }
+
+        /* ================= SINGLE PAGE HARD LOCK ================= */
+
+        /* Never allow page breaks inside offer letter */
+        #offerLetter,
+        .letter-inner,
+        .signature-row {
+            page-break-inside: avoid !important;
+            break-inside: avoid !important;
+        }
+
+        /* Lock height strictly to A4 */
+        #offerLetter {
+            height: 1123px !important;
+            /* A4 height */
+            max-height: 1123px !important;
+            overflow: hidden !important;
+        }
+
+        /* Reduce spacing slightly to fit all content */
+        .content {
+            font-size: 13.4px;
+            /* was 14 */
+            line-height: 1.6;
+            /* was 1.7 */
+        }
+
+        .letter-inner {
+            padding: 24px 36px 28px !important;
+        }
+
+        /* Shrink logos slightly */
+        .signature-item img {
+            max-height: 70px;
+        }
+
+        .signature-item1 img {
+            max-height: 70px;
+        }
+    </style>
+
+
+</head>
+
+<body class="offer-letter-page">
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-black bg-opacity-75 backdrop-blur py-2 shadow">
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center fw-bold fs-3" href="index.html">
+                <img src="img/navbar-logo.png" alt="InternSpark Logo" height="70" class="me-2">
+                <!-- <span style="color:var(--yellow)">Intern<span style="color:#fff">Spark</span> </span> -->
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler bg-warning border-0 p-2 rounded" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <i class="fas fa-bars text-dark fs-5"></i>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">
+                            Internship
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark rounded-4">
+                            <li><a class="dropdown-item" href="internship.html">Internship Apply</a></li>
+
+                            <li><a class="dropdown-item" href="internProfile.html">
+                                    Intern Profile
+                                </a></li>
+                            <li><a class="dropdown-item" href="task.html">Tasks</a></li>
+
+                            <li><a class="dropdown-item" href="submission.html">Task Submission</a></li>
+                            <li><a class="dropdown-item" href="certificate.html">Certificate</a></li>
+
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="assessment.html">Assessment</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="Contact.html">Contact Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="about.html">About</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark rounded-4">
+                            <li><a class="dropdown-item" href="offer-letter.html">Offer Letter</a></li>
+                            <li><a class="dropdown-item" href="lor.html">Letter of Recommendation</a></li>
+                            <li><a class="dropdown-item" href="report-card.html">Report Card</a></li>
+                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="code-editor.html">Code Editor</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-warning fw-bold px-4 py-2 rounded-pill" href="internship.html">
+                            Apply Now
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Sticky Top Download Bar -->
+    <div class="top-download-bar text-center">
+        <button id="topDownloadBtn" class="btn btn-sm btn-light text-primary fw-semibold px-4" style="display:none;"
+            onclick="downloadPDF()">
+            <i class="fa-solid fa-download me-1"></i> Download LOR
+        </button>
+    </div>
+
+    <div class="page-wrapper">
+
+        <div class="page-header">
+            <div class="sub-tag">
+                <i class="fa-solid fa-certificate text-warning"></i>
+                Internship Documentation Portal
+            </div>
+            <h1>InternSpark LOR Generator</h1>
+            <p>Generate a professional Letter of Recommendation (LOR) for your internship at InternSpark.</p>
+        </div>
+
+        <div class="info-form-grid">
+
+            <!-- LEFT SIDE INFO -->
+            <div class="info-card">
+                <div class="info-logo">
+                    <img src="img/navbar-logo.png" alt="InternSpark Logo">
+                </div>
+
+                <h2 class="fs-6 fw-semibold mb-1">About this LOR</h2>
+                <ul class="info-points">
+                    <li>
+                        <i class="fa-solid fa-circle-check text-warning"></i>
+                        <span>Based on your completed internship and performance at InternSpark.</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-check text-warning"></i>
+                        <span>Auto-fills your name, domain, duration, and internship dates in the LOR.</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-check text-warning"></i>
+                        <span>Download a clean, A4-sized PDF suitable for academic and professional use.</span>
+                    </li>
+                </ul>
+
+                <div class="info-meta">
+                    <span><i class="fa-solid fa-globe me-1 text-warning"></i>Remote Internship</span>
+                    <span><i class="fa-solid fa-clock me-1 text-warning"></i>Task-Based Learning</span>
+                    <span><i class="fa-solid fa-award me-1 text-warning"></i>Performance-Based LOR</span>
+                </div>
+
+                <div class="mt-3 small text-muted">
+                    For any queries, contact:<br>
+                    <strong>internship@internspark.in</strong>
+                </div>
+
+                <!-- <div class="social-row">
+                    <a href="https://www.linkedin.com/company/alfido-tech/" target="_blank"
+                        class="bg-primary text-white" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.alfidotech.com/" target="_blank" class="bg-success text-white" title="Website">
+                        <i class="fa-solid fa-home"></i>
+                    </a>
+                    <a href="https://www.whatsapp.com/channel/0029Va9oTsF1CYoKbCt5TJ41" target="_blank"
+                        class="bg-warning text-dark" title="WhatsApp Channel">
+                        <i class="fas fa-bullhorn"></i>
+                    </a>
+                    <a href="https://t.me/+s9WykS4sL7hlN2I1" target="_blank" class="bg-info text-white"
+                        title="Telegram">
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+                </div> -->
+            </div>
+
+            <!-- RIGHT SIDE FORM -->
+            <div class="form-card">
+                <h2>Intern Details</h2>
+                <p>Use the same details that appear on your offer letter and completion records.</p>
+
+                <form id="lorForm">
+                    <div class="mb-2">
+                        <label for="name" class="form-label text-warning">Full Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Enter intern full name" required>
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="internshipDomain" class="form-label text-warning">Internship Domain</label>
+                        <select id="internshipDomain" class="form-select" required>
+                            <option value="" disabled selected>Select domain...</option>
+
+                            <option value="Frontend Developer">Frontend Developer</option>
+                            <option value="UX/UI Design">UX/UI Design</option>
+                            <option value="React.JS">React.JS</option>
+                            <option value="MERN Stack Developer">MERN Stack Developer</option>
+                            <option value="Python Developer">Python Developer</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="C++/C Programming">C++/C Programming</option>
+                            <option value="Java Developer">Java Developer</option>
+                            <option value=".NET Developer">.NET Developer</option>
+
+                            <option value="Data Analytics">Data Analytics</option>
+                            <option value="Business Analytics">Business Analytics</option>
+                            <option value="Data Science">Data Science</option>
+                            <option value="Machine Learning">Machine Learning</option>
+                            <option value="Artificial Intelligence">Artificial Intelligence</option>
+
+                            <option value="Digital Marketing">Digital Marketing</option>
+                            <option value="Cybersecurity">Cybersecurity</option>
+
+                            <option value="Android Developer">Android Developer</option>
+                            <option value="Embedded Systems">Embedded Systems</option>
+                            <option value="Very Large Scale Integration (VLSI)">Very Large Scale Integration (VLSI)
+                            </option>
+
+                            <option value="Cloud Computing">Cloud Computing</option>
+                            <option value="Cloud Engineer">Cloud Engineer</option>
+
+                            <option value="DevOps">DevOps</option>
+                            <option value="Human Resource(HR)">Human Resource(HR)</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="startDateInput" class="form-label text-warning">Internship Start Date</label>
+                        <input type="date" id="startDateInput" class="form-control" required>
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="endDateInput" class="form-label text-warning">Internship End Date</label>
+                        <input type="date" id="endDateInput" class="form-control" required>
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="internshipMonth" class="form-label text-warning">Internship Duration</label>
+                        <select id="internshipMonth" class="form-select" required>
+                            <option value="" disabled selected>Select duration...</option>
+                            <option value="1 Month">1 Month</option>
+                            <option value="2 Months">2 Months</option>
+                            <option value="3 Months">3 Months</option>
+                            <option value="45 Days">45 Days</option>
+                            <option value="4 Months">4 Months</option>
+                            <option value="6 Months">6 Months</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="candidateIdInput" class="form-label text-warning">Candidate ID (C.ID)</label>
+                        <input type="text" id="candidateIdInput" class="form-control"
+                            placeholder="Enter Candidate ID (as in records)" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="performanceInput" class="form-label text-warning">Performance Level</label>
+                        <select id="performanceInput" class="form-select" required>
+                            <option value="" disabled selected>Select performance...</option>
+                            <option value="outstanding">Outstanding</option>
+                            <option value="excellent">Excellent</option>
+                            <option value="very good">Very Good</option>
+                            <option value="good">Good</option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="btn btn-primary-main w-100" onclick="generateLOR()">
+                        <i class="fa-solid fa-file-lines me-1"></i> Generate LOR
+                    </button>
+                </form>
+
+                <button id="downloadButton" class="btn btn-success w-100 mt-2" style="display:none;"
+                    onclick="downloadPDF()">
+                    <i class="fa-solid fa-download me-1"></i> Download LOR (PDF)
+                </button>
+            </div>
+        </div>
+
+        <!-- LOR PREVIEW (A4) -->
+        <div class="letter-outer">
+            <div class="letter-paper" id="letterWrapper" style="display:none;">
+
+                <!-- A4 content -->
+                <div id="lorLetter">
+                    <div class="letter-inner">
+                        <div class="watermark">
+                            <img src="img/logo9.png" alt="Watermark">
+                        </div>
+
+                        <!-- TOP SECTION -->
+                        <div>
+                            <div class="letter-header">
+                                <div class="header-logo">
+                                    <img src="img/logo1.png" alt="InternSpark Logo">
+                                </div>
+                                <div class="letter-contact">
+                                    <p>Bengaluru, Karnataka – 560095, India</p>
+                                    <p>internship@internspark.in</p>
+                                    <p>www.internspark.in</p>
+                                    <p><b>Date:</b> <span id="displayLorDate"></span></p>
+                                </div>
+                            </div>
+
+                            <div class="top-divider"></div>
+
+                            <div class="title">Letter of Recommendation</div>
+
+                            <div class="content">
+                                <p>To Whom It May Concern,</p>
+
+                                <p>This is to formally recommend <b><span id="displayName"></span></b>
+                                    (Candidate ID: <b><span id="displayCandidateId"></span></b>) for future academic or
+                                    professional
+                                    opportunities. <span id="heSheText1">He/She</span> successfully completed a
+                                    <b><span id="displayMonth"></span></b> remote internship in the role of
+                                    <b><span id="displayDomain"></span> Intern</b> at <b>InternSpark</b> from
+                                    <b><span id="displayStartDate"></span></b> to <b><span
+                                            id="displayEndDate"></span></b>.
+                                </p>
+
+                                <p>During this period, <span id="heSheText2">he/she</span> worked on a series of
+                                    <b>task-based assignments and real-world projects</b> relevant to the chosen domain.
+                                    These tasks were
+                                    designed to simulate practical industry scenarios, and <span id="heSheText3">the
+                                        intern</span>
+                                    consistently demonstrated the ability to understand requirements, deliver quality
+                                    work, and adhere to
+                                    timelines in a remote working environment.
+                                </p>
+
+                                <p><span id="heSheText4">He/She</span> exhibited
+                                    <span id="performanceLine"></span>
+                                    throughout the internship. <span id="heSheText5">The intern</span> showed a
+                                    proactive approach to
+                                    learning, regularly sought clarification when needed, and effectively incorporated
+                                    feedback to improve
+                                    the quality of deliverables.
+                                </p>
+
+                                <p>In addition to technical growth, <span id="heSheText6">he/she</span> displayed strong
+                                    professional
+                                    values such as discipline, responsibility, and clear communication. <span
+                                        id="heSheText7">He/She</span>
+                                    coordinated well with mentors and peers, maintained a positive attitude, and
+                                    contributed meaningfully
+                                    to the ongoing activities of the internship program.</p>
+
+                                <p>Based on <span id="heSheText8">his/her</span> overall performance, we can confidently
+                                    state that
+                                    <span id="heSheText9">the candidate</span> has developed a solid foundation in
+                                    <b><span id="displayDomain2"></span></b> and is well-prepared to take up future
+                                    roles in the
+                                    technology and professional ecosystem. We believe that <span
+                                        id="heSheText10">he/she</span> will be an
+                                    asset to any organization or institution that may offer <span
+                                        id="heSheText11">him/her</span> an
+                                    opportunity.
+                                </p>
+
+                                <p>This Letter of Recommendation is being issued upon the request of the candidate to
+                                    support
+                                    <span id="heSheText12">his/her</span> future academic, internship, or job
+                                    applications.
+                                </p>
+
+                                <p>If you require any further information or wish to verify the details of this
+                                    internship, please feel
+                                    free to contact us at <b>internship@internspark.in</b>.</p>
+
+                                <p><b>We extend our best wishes to <span id="displayName2"></span> for a successful
+                                        career ahead.</b>
+                                </p>
+                            </div>
+
+                            <div class="letter-footer-text">
+                                <p>Sincerely,</p>
+                            </div>
+                        </div>
+
+                        <!-- BOTTOM SIGNATURES -->
+                        <div class="signature-row">
+                            <div class="signature-item1">
+                                <img src="img/sing.png" alt="Founder Signature">
+                                <p><b>Founder &amp; CEO</b></p>
+                            </div>
+                            <div class="signature-item">
+                                <img src="img/stampa.png" alt="Seal">
+                            </div>
+                            <div class="signature-item">
+                                <img src="img/aicte.png" alt="AICTE Logo">
+                            </div>
+                            <div class="signature-item">
+                                <img src="img/iso.png" alt="ISO Logo">
+                            </div>
+                            <div class="signature-item">
+                                <img src="img/qr.jpg" alt="QR Code for Verification">
+                            </div>
+                            <div class="signature-item">
+                                <img src="img/MSME Logo.png" alt="MSME Logo">
+                            </div>
+                        </div>
+                        <br><br><br>
+
+                    </div> <!-- /.letter-inner -->
+                </div> <!-- /#lorLetter -->
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Scripts -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script>
+        function generateLOR() {
+            const name = document.getElementById('name').value.trim();
+            const domain = document.getElementById('internshipDomain').value;
+            const candidateId = document.getElementById('candidateIdInput').value.trim();
+            const duration = document.getElementById('internshipMonth').value;
+            const startDate = document.getElementById('startDateInput').value;
+            const endDate = document.getElementById('endDateInput').value;
+            const performance = document.getElementById('performanceInput').value;
+
+            if (!name || !domain || !candidateId || !duration || !startDate || !endDate || !performance) {
+                alert("Please fill all fields before generating the LOR.");
+                return;
+            }
+
+            // Basic fields
+            document.getElementById('displayName').textContent = name;
+            document.getElementById('displayName2').textContent = name;
+            document.getElementById('displayDomain').textContent = domain;
+            document.getElementById('displayDomain2').textContent = domain;
+            document.getElementById('displayCandidateId').textContent = candidateId;
+            document.getElementById('displayMonth').textContent = duration;
+
+            // Date formatting dd/mm/yyyy
+            function formatDate(value) {
+                const [y, m, d] = value.split("-");
+                return `${d}/${m}/${y}`;
+            }
+            const startFormatted = formatDate(startDate);
+            const endFormatted = formatDate(endDate);
+
+            document.getElementById('displayStartDate').textContent = startFormatted;
+            document.getElementById('displayEndDate').textContent = endFormatted;
+
+            // LOR date = today's date (or end date) – here using end date
+            document.getElementById('displayLorDate').textContent = endFormatted;
+
+            // Performance line
+            let perfText = "a consistently good level of performance";
+            if (performance === "outstanding") {
+                perfText = "an outstanding level of performance, consistently exceeding expectations";
+            } else if (performance === "excellent") {
+                perfText = "an excellent level of performance, frequently exceeding expectations";
+            } else if (performance === "very good") {
+                perfText = "a very good level of performance, meeting expectations with high quality work";
+            }
+            document.getElementById('performanceLine').textContent = perfText;
+
+            // Pronouns – default gender-neutral “he/she”
+            const pronoun = "he/she";
+            const pronounCap = "He/She";
+            const possessive = "his/her";
+            const candidateWord = "the candidate";
+
+            const map = {
+                heSheText1: pronounCap,
+                heSheText2: pronoun,
+                heSheText3: "the intern",
+                heSheText4: pronounCap,
+                heSheText5: "the intern",
+                heSheText6: pronoun,
+                heSheText7: pronounCap,
+                heSheText8: possessive,
+                heSheText9: candidateWord,
+                heSheText10: pronounCap,
+                heSheText11: pronoun,
+                heSheText12: possessive
+            };
+            Object.keys(map).forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.textContent = map[id];
+            });
+
+            // Show preview & download buttons
+            document.getElementById('letterWrapper').style.display = 'block';
+            document.getElementById('downloadButton').style.display = 'block';
+            document.getElementById('topDownloadBtn').style.display = 'inline-block';
+
+            document.getElementById('letterWrapper').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function downloadPDF() {
+            const lorLetter = document.getElementById('lorLetter');
+            const options = {
+                margin: 0,
+                filename: 'Internship_Letter_of_Recommendation.pdf',
+                image: { type: 'jpeg', quality: 1.0 },
+                html2canvas: { scale: 3, useCORS: true },
+                jsPDF: { unit: 'pt', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(options).from(lorLetter).save();
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="pt-5 pb-4 mt-5 position-relative">
+        <div class="container">
+            <div class="row gy-4">
+
+                <!-- Brand -->
+                <div class="col-lg-4 col-md-6">
+                    <img src="img/navbar-logo.png" alt="InternSpark Logo" class="footer-logo">
+
+                    <p class="text-secondary mt-3">
+                        InternSpark is an online internship & skill development platform
+                        powered by InternSpark.
+                    </p>
+
+                    <!-- Social Media -->
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="https://www.linkedin.com/company/internspark" target="_blank" class="footer-social"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/internspark" target="_blank" class="footer-social"
+                            aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/internspark" target="_blank" class="footer-social" aria-label="Twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@internspark" target="_blank" class="footer-social"
+                            aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="domains.html" class="footer-link">Domains</a></li>
+                        <li><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+                        <li><a href="/sitemap.xml" class="footer-link">Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Legal</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="/privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="footer-link">Terms & Conditions</a></li>
+                        <li><a href="/refund.html" class="footer-link">Refund Policy</a></li>
+                        <li><a href="/disclaimer.html" class="footer-link">Disclaimer</a></li>
+                        <li><a href="/accessibility.html" class="footer-link">Accessibility</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Address -->
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Contact & Address</h6>
+
+                    <p class="text-secondary small mb-2">
+                        <i class="fas fa-map-marker-alt me-2 text-warning"></i>
+                        Bengaluru, Karnataka – 560095, India
+                    </p>
+
+                    <p class="text-secondary small mb-2">
+                        <i class="fas fa-envelope me-2 text-warning"></i>
+                        <a href="mailto:info@internspark.in" class="footer-link">
+                            info@internspark.in
+                        </a>
+                    </p>
+
+                    <p class="text-secondary small mb-2">
+                        <i class="fas fa-phone me-2 text-warning"></i>
+                        <a href="tel:+919977465250" class="footer-link">
+                            +91 99774 65250
+                        </a>
+                    </p>
+
+                    <p class="text-secondary small mb-0">
+                        <i class="fas fa-headset me-2 text-warning"></i>
+                        <a href="mailto:support@internspark.in" class="footer-link">
+                            support@internspark.in
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+
+            <hr class="my-4 border-secondary">
+
+            <!-- Bottom Bar -->
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center">
+                <p class="mb-2 mb-md-0 text-secondary small">
+                    © 2025 InternSpark | Powered by
+                    <a href="https://alfidotech.com" target="_blank">Alfido Tech</a>
+                </p>
+                <p class="text-secondary small mb-0">
+                    Made with ❤️ for learners
+                </p>
+            </div>
+
+            <!-- Legal Safe Disclaimer -->
+            <p class="text-secondary small text-center mt-3">
+                InternSpark is a private skill-development initiative and is not affiliated
+                with AICTE or any government organization.
+            </p>
+        </div>
+    </footer>
+    <!-- ================= Footer End ================= -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+</body>
+
+</html>
