@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>InternSpark Blog | Internships, Skills & Career Growth</title>
+
+    <!-- SEO Meta -->
+    <meta name="description"
+        content="Read the InternSpark Blog for insights on internships, skill assessments, certifications, report cards, and career growth. Practical guides to help students become job-ready.">
+
+    <meta name="keywords"
+        content="InternSpark Blog, Internship Blog, Career Guidance Blog, Skill Development Articles, Internship Tips, Student Career Blog, Alfido Tech Blog">
+
+    <meta name="author" content="InternSpark | Alfido Tech">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="InternSpark Blog | Internships & Career Growth">
+    <meta property="og:description"
+        content="Explore articles on internships, assessments, certifications, and career readiness. Learn how InternSpark helps students build real-world skills.">
+    <meta property="og:url" content="https://www.internspark.in/blog.html">
+    <meta property="og:image" content="https://www.internspark.in/img/og-blog.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="InternSpark Blog">
+    <meta name="twitter:description"
+        content="Insights, guides, and updates on internships, skill assessments, certifications, and career growth by InternSpark.">
+    <meta name="twitter:image" content="https://www.internspark.in/img/og-blog.png">
+
+
+
+
+    <!-- Favicon -->
+    <link rel="icon" href="/img/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+    <link rel="apple-touch-icon" href="/img/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f0f23">
+
+
+    <!-- ================= SEO & UI ================= -->
+    <meta name="google" content="notranslate">
+    <meta name="theme-color" content="#0f0f23">
+
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-519NNPN4L1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-519NNPN4L1');
+    </script>
+    <style>
+        .hero-header {
+            position: relative;
+            padding: 100px 20px;
+            text-align: center;
+            background: url('img/banar1.jpg') center/cover no-repeat;
+            color: #fff;
+        }
+
+        .hero-header::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            pointer-events: none;
+            /* 🔥 FIXED: button clickable */
+        }
+
+        .hero-header h1,
+        .hero-header p,
+        .hero-header a {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-header h1 {
+            font-size: clamp(2.2rem, 5vw, 2.8rem);
+            font-weight: 700;
+        }
+
+        .hero-header p {
+            opacity: 0.85;
+        }
+
+        /* ================= BLOG SECTION ================= */
+
+        .blog-section {
+            background: transparent;
+        }
+
+        .blog-card {
+            height: 100%;
+            background: linear-gradient(180deg, #0f122b, #0b0d1e);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
+            padding: 26px;
+            transition: all 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+            border-color: rgba(255, 193, 7, 0.35);
+        }
+
+        .blog-card-body h5 {
+            color: #ffffff;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .blog-card-body p {
+            color: #cbd5e1;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .blog-tag {
+            display: inline-block;
+            background: rgba(255, 193, 7, 0.15);
+            color: #ffc107;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 999px;
+        }
+
+        .blog-read {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 14px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffc107;
+            text-decoration: none;
+        }
+
+        .blog-read:hover {
+            color: #ffb300;
+            text-decoration: underline;
+        }
+
+        /* ================= FEATURED BLOG ================= */
+
+        .featured-box {
+            background: linear-gradient(180deg, #0f122b, #0b0d1e);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
+            padding: 26px;
+        }
+
+        .featured-points {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .featured-points li {
+            color: #cbd5e1;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        /* ================= BLOG CTA ================= */
+
+        .blog-cta {
+            background: radial-gradient(circle at top, #111827, #020617);
+        }
+
+        /* ================= BLOG INTRO ================= */
+
+        .blog-intro {
+            background: transparent;
+        }
+
+        .blog-info-card {
+            height: 100%;
+            background: linear-gradient(180deg, #0f122b, #0b0d1e);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .blog-info-card h5 {
+            color: #ffffff;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .blog-info-card p {
+            color: #cbd5e1;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .blog-info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+            border-color: rgba(255, 193, 7, 0.35);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-black bg-opacity-75 backdrop-blur py-2 shadow">
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center fw-bold fs-3" href="index.html">
+                <img src="img/navbar-logo.png" alt="InternSpark Logo" height="70" class="me-2">
+                <!-- <span style="color:var(--yellow)">Intern<span style="color:#fff">Spark</span> </span> -->
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler bg-warning border-0 p-2 rounded" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <i class="fas fa-bars text-dark fs-5"></i>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">
+                            Internship
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark rounded-4">
+                            <li><a class="dropdown-item" href="internship.html">Internship Apply</a></li>
+
+                            <li><a class="dropdown-item" href="internProfile.html">
+                                    Intern Profile
+                                </a></li>
+                            <li><a class="dropdown-item" href="task.html">Tasks</a></li>
+
+                            <li><a class="dropdown-item" href="submission.html">Task Submission</a></li>
+                            <li><a class="dropdown-item" href="certificate.html">Certificate</a></li>
+
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="assessment.html">Assessment</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="Contact.html">Contact Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="about.html">About</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark rounded-4">
+                            <li><a class="dropdown-item" href="offer-letter.html">Offer Letter</a></li>
+                            <li><a class="dropdown-item" href="lor.html">Letter of Recommendation</a></li>
+                            <li><a class="dropdown-item" href="report-card.html">Report Card</a></li>
+                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="code-editor.html">Code Editor</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-warning fw-bold px-4 py-2 rounded-pill" href="internship.html">
+                            Apply Now
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-header">
+        <div class="container text-center">
+
+            <h1 class="mb-3 fade-in delay-1">
+                <span style="color: yellow;">InternSpark Blog</span>
+            </h1>
+
+            <p class="lead text-white mb-4 fade-in delay-2">
+                Insights, guides, and updates on internships, assessments, certifications, and career growth.
+            </p>
+        </div>
+    </section>
+
+    <!-- ================= BLOG INTRO CONTENT ================= -->
+    <section class="blog-intro py-5">
+        <div class="container">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+
+                    <h2 class="fw-bold text-white mb-3">
+                        Explore Career-Focused Insights with InternSpark
+                    </h2>
+
+                    <p class="text-secondary fs-5">
+                        Explore articles on internships, assessments, certifications, and career readiness.
+                        Learn how InternSpark helps students build real-world skills and become job-ready.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="row mt-5 g-4">
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="blog-info-card">
+                        <h5>🎓 Internships That Build Real Skills</h5>
+                        <p>
+                            Learn how project-based internships provide hands-on experience,
+                            improve problem-solving, and prepare you for professional workflows.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="blog-info-card">
+                        <h5>🧠 Skill Assessments Beyond Marks</h5>
+                        <p>
+                            Understand why modern hiring focuses on practical skills,
+                            real-world performance, and competency-based evaluations.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="blog-info-card">
+                        <h5>📜 Verified Certifications</h5>
+                        <p>
+                            Discover how QR-verified certificates increase recruiter trust
+                            and add genuine value to your resume.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="blog-info-card">
+                        <h5>📊 Weekly Report Cards</h5>
+                        <p>
+                            Learn how structured weekly evaluations, grades, and mentor
+                            feedback help interns track progress and improve continuously.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="blog-info-card">
+                        <h5>💼 Career Readiness</h5>
+                        <p>
+                            From resume building to interview preparation,
+                            explore content designed to help you transition into the workforce.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="blog-info-card">
+                        <h5>🌱 Learn. Grow. Succeed.</h5>
+                        <p>
+                            Every article is backed by InternSpark’s real internship,
+                            assessment, and certification ecosystem.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- ================= BLOG INTRO CONTENT END ================= -->
+
+
+    <!-- ================= FEATURED BLOG ================= -->
+    <section class="featured-blog py-5">
+        <div class="container">
+
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <span class="blog-tag mb-2">Featured</span>
+                    <h2 class="fw-bold text-white mt-3">
+                        Complete Guide to Online Internships in 2026
+                    </h2>
+                    <p class="text-secondary mt-3">
+                        Online internships have transformed how students gain industry
+                        experience. This complete guide covers eligibility, skill
+                        requirements, certification value, and how to stand out.
+                    </p>
+                    <a href="#" class="blog-read mt-3">
+                        Read Full Guide <i class="fas fa-arrow-right ms-1"></i>
+                    </a>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="featured-box">
+                        <ul class="featured-points">
+                            <li>✔ What recruiters expect from interns</li>
+                            <li>✔ How weekly report cards improve learning</li>
+                            <li>✔ Importance of verified certificates</li>
+                            <li>✔ Mistakes students should avoid</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= INTERNSHIP GUIDES ================= -->
+    <section class="blog-section py-5">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-white">Internship Guides</h2>
+                <p class="text-secondary">
+                    Step-by-step guides to help you succeed in internships.
+                </p>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-6 col-lg-4">
+                    <article class="blog-card">
+                        <span class="blog-tag">Guide</span>
+                        <h5 class="mt-3">How to Choose the Right Internship Domain</h5>
+                        <p>
+                            Confused between Web, AI, Data Science, or Cyber Security?
+                            Learn how to choose based on skills and career goals.
+                        </p>
+                        <a href="#" class="blog-read">Read More</a>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <article class="blog-card">
+                        <span class="blog-tag">Guide</span>
+                        <h5 class="mt-3">How to Maintain a High Internship Grade</h5>
+                        <p>
+                            Discover how weekly submissions, consistency, and mentor
+                            feedback help you achieve A+ performance.
+                        </p>
+                        <a href="#" class="blog-read">Read More</a>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <article class="blog-card">
+                        <span class="blog-tag">Guide</span>
+                        <h5 class="mt-3">Internship Documentation Explained</h5>
+                        <p>
+                            Offer Letter, LOR, Certificate, and Report Card —
+                            understand why each document matters.
+                        </p>
+                        <a href="#" class="blog-read">Read More</a>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= STUDENT RESOURCES ================= -->
+    <section class="blog-section py-5">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-white">Student Resources</h2>
+                <p class="text-secondary">
+                    Helpful content for students, interns, and freshers.
+                </p>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-6 col-lg-3">
+                    <article class="blog-card text-center">
+                        <h5>Resume Building Tips</h5>
+                        <p>
+                            Learn how to showcase internships, projects,
+                            and certificates effectively.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <article class="blog-card text-center">
+                        <h5>Interview Preparation</h5>
+                        <p>
+                            Common internship interview questions and
+                            preparation strategies.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <article class="blog-card text-center">
+                        <h5>Skill Assessments</h5>
+                        <p>
+                            Why skill tests matter more than academic marks
+                            in modern hiring.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <article class="blog-card text-center">
+                        <h5>Career Growth</h5>
+                        <p>
+                            How internships help you transition into
+                            full-time roles.
+                        </p>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- ================= BLOG SECTION ================= -->
+    <section class="blog-section py-5">
+        <div class="container">
+
+            <!-- Intro -->
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-white">InternSpark Blog</h2>
+                <p class="text-secondary mt-2">
+                    Insights, guides, and updates on internships, assessments, certifications,
+                    and career growth.
+                </p>
+            </div>
+
+            <!-- Blog Grid -->
+            <div class="row g-4">
+
+                <!-- Blog Card 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <article class="blog-card">
+                        <div class="blog-card-body">
+                            <span class="blog-tag">Internships</span>
+                            <h5 class="mt-3">
+                                How Internships Help You Build Real-World Skills
+                            </h5>
+                            <p>
+                                Internships bridge the gap between academic learning and
+                                industry requirements. Learn how project-based internships
+                                prepare you for real jobs.
+                            </p>
+                            <a href="#" class="blog-read">
+                                Read More <i class="fas fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Blog Card 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <article class="blog-card">
+                        <div class="blog-card-body">
+                            <span class="blog-tag">Assessments</span>
+                            <h5 class="mt-3">
+                                Why Skill Assessments Matter More Than Marks
+                            </h5>
+                            <p>
+                                Skill-based assessments evaluate your practical knowledge,
+                                problem-solving ability, and job readiness beyond exams.
+                            </p>
+                            <a href="#" class="blog-read">
+                                Read More <i class="fas fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Blog Card 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <article class="blog-card">
+                        <div class="blog-card-body">
+                            <span class="blog-tag">Certification</span>
+                            <h5 class="mt-3">
+                                How Verified Certificates Improve Your Resume
+                            </h5>
+                            <p>
+                                Learn how verified certificates with QR validation help
+                                recruiters trust your skills and achievements instantly.
+                            </p>
+                            <a href="#" class="blog-read">
+                                Read More <i class="fas fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Blog Card 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <article class="blog-card">
+                        <div class="blog-card-body">
+                            <span class="blog-tag">Report Cards</span>
+                            <h5 class="mt-3">
+                                Weekly Internship Report Cards: Why They Matter
+                            </h5>
+                            <p>
+                                Weekly performance tracking helps interns understand progress,
+                                improve weak areas, and showcase consistency.
+                            </p>
+                            <a href="#" class="blog-read">
+                                Read More <i class="fas fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Blog Card 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <article class="blog-card">
+                        <div class="blog-card-body">
+                            <span class="blog-tag">Career</span>
+                            <h5 class="mt-3">
+                                How InternSpark Helps You Become Job-Ready
+                            </h5>
+                            <p>
+                                From internships to assessments and documentation,
+                                InternSpark provides a complete career-building ecosystem.
+                            </p>
+                            <a href="#" class="blog-read">
+                                Read More <i class="fas fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ================= BLOG SECTION END ================= -->
+
+    <!-- ================= BLOG CTA ================= -->
+    <section class="blog-cta py-5">
+        <div class="container text-center">
+
+            <h2 class="fw-bold text-white mb-3">
+                Start Your Internship Journey with InternSpark
+            </h2>
+            <p class="text-secondary mb-4">
+                Apply for industry-aligned internships, get assessed,
+                earn verified certificates, and build your career.
+            </p>
+
+            <a href="internship.html" class="btn btn-warning fw-bold px-5 py-3 rounded-pill">
+                Apply for Internship
+            </a>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <footer class="pt-5 pb-4 mt-5 position-relative">
+        <div class="container">
+            <div class="row gy-4">
+
+                <!-- Brand -->
+                <div class="col-lg-4 col-md-6">
+                    <img src="img/navbar-logo.png" alt="InternSpark Logo" class="footer-logo">
+
+                    <p class="text-secondary mt-3">
+                        InternSpark is an online internship & skill development platform
+                        powered by Alfido Tech.
+                    </p>
+
+                    <!-- Social Media -->
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="https://www.linkedin.com/company/internspark" target="_blank" class="footer-social"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/internspark" target="_blank" class="footer-social"
+                            aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/internspark" target="_blank" class="footer-social" aria-label="Twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@internspark" target="_blank" class="footer-social"
+                            aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="domains.html" class="footer-link">Domains</a></li>
+                        <li><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+                        <li><a href="/sitemap.xml" class="footer-link">Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Legal</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="/privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="footer-link">Terms & Conditions</a></li>
+                        <li><a href="/refund.html" class="footer-link">Refund Policy</a></li>
+                        <li><a href="/disclaimer.html" class="footer-link">Disclaimer</a></li>
+                        <li><a href="/accessibility.html" class="footer-link">Accessibility</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Address -->
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Contact & Address</h6>
+
+                    <p class="text-secondary small mb-2">
+                        <i class="fas fa-map-marker-alt me-2 text-warning"></i>
+                        Bengaluru, Karnataka – 560095, India
+                    </p>
+
+                    <p class="text-secondary small mb-2">
+                        <i class="fas fa-envelope me-2 text-warning"></i>
+                        <a href="mailto:info@internspark.in" class="footer-link">
+                            info@internspark.in
+                        </a>
+                    </p>
+
+                    <p class="text-secondary small mb-2">
+                        <i class="fas fa-phone me-2 text-warning"></i>
+                        <a href="tel:+919977465250" class="footer-link">
+                            +91 99774 65250
+                        </a>
+                    </p>
+
+                    <p class="text-secondary small mb-0">
+                        <i class="fas fa-headset me-2 text-warning"></i>
+                        <a href="mailto:support@internspark.in" class="footer-link">
+                            support@internspark.in
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+
+            <hr class="my-4 border-secondary">
+
+            <!-- Bottom Bar -->
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center">
+                <p class="mb-2 mb-md-0 text-secondary small">
+                    © 2025 InternSpark | Powered by
+                    <a href="https://alfidotech.com" target="_blank">Alfido Tech</a>
+                </p>
+                <p class="text-secondary small mb-0">
+                    Made with ❤️ for learners
+                </p>
+            </div>
+
+            <!-- Legal Safe Disclaimer -->
+            <p class="text-secondary small text-center mt-3">
+                InternSpark is a private skill-development initiative and is not affiliated
+                with AICTE or any government organization.
+            </p>
+        </div>
+    </footer>
+    <!-- ================= Footer End ================= -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+</body>
+
+</html>
