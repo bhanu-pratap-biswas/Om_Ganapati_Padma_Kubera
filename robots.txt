@@ -10,4 +10,4 @@ Disallow: /config/
 Disallow: /private/
 
 # Sitemap (canonical domain)
-Sitemap: https://internspark.in/sitemap.xml
+Sitemap: https://www.internspark.in//sitemap.xml
