@@ -1,94 +1,9 @@
-# =====================================================
-# InternSpark – .htaccess (SEO + Performance + Security)
-# =====================================================
-
-# -------------------------------
-# Enable Rewrite Engine
-# -------------------------------
+# Enable URL rewriting
 RewriteEngine On
 
-# -------------------------------
-# Force HTTPS + NON-WWW (Single Redirect)
-# http://internspark.in
-# http://www.internspark.in
-# https://www.internspark.in
-# → https://internspark.in
-# -------------------------------
-RewriteCond %{HTTPS} !=on [OR]
-RewriteCond %{HTTP_HOST} ^www\.internspark\.in$ [NC]
-RewriteRule ^ https://internspark.in%{REQUEST_URI} [L,R=301,NE]
+# Redirect all HTTP requests to HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# -------------------------------
-# Custom 404 Error Page
-# -------------------------------
+# Custom 404 error page
 ErrorDocument 404 /404.html
-
-# -------------------------------
-# Prevent Directory Listing
-# -------------------------------
-Options -Indexes
-
-# =====================================================
-# PERFORMANCE
-# =====================================================
-
-# -------------------------------
-# Browser Caching
-# -------------------------------
-<IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresDefault "access plus 7 days"
-
-  ExpiresByType text/css "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
-  ExpiresByType application/json "access plus 1 week"
-
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/webp "access plus 1 year"
-  ExpiresByType image/svg+xml "access plus 1 year"
-
-  ExpiresByType font/woff2 "access plus 1 year"
-</IfModule>
-
-# -------------------------------
-# GZIP Compression
-# -------------------------------
-<IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/css
-  AddOutputFilterByType DEFLATE application/javascript application/json
-  AddOutputFilterByType DEFLATE image/svg+xml
-</IfModule>
-
-# =====================================================
-# SECURITY (GA4 + AdSense SAFE)
-# =====================================================
-
-<IfModule mod_headers.c>
-  Header always set X-Content-Type-Options "nosniff"
-  Header always set X-Frame-Options "SAMEORIGIN"
-  Header always set X-XSS-Protection "1; mode=block"
-  Header always set Referrer-Policy "strict-origin-when-cross-origin"
-
-  # Enable HSTS (only if HTTPS fully working)
-  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
-</IfModule>
-
-# -------------------------------
-# Block Sensitive Files
-# -------------------------------
-<FilesMatch "(^\.env|\.git|composer\.json|composer\.lock|package\.json|package-lock\.json)">
-  Require all denied
-</FilesMatch>
-
-# -------------------------------
-# Optional: Prevent Image Hotlinking
-# (Enable only if needed)
-# -------------------------------
-#RewriteCond %{HTTP_REFERER} !^$
-#RewriteCond %{HTTP_REFERER} !^https?://(www\.)?internspark\.in/ [NC]
-#RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F,NC]
-
-# =====================================================
-# END InternSpark .htaccess
-# =====================================================
