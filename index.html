@@ -22,7 +22,7 @@
     <meta name="robots" content="index, follow">
 
     <!-- Canonical (IMPORTANT for SEO) -->
-    <link rel="canonical" href="https://www.internspark.in//">
+    <link rel="canonical" href="https://internspark.in/">
 
     <!-- ================= OPEN GRAPH (SOCIAL SHARING) ================= -->
     <meta property="og:type" content="website">
@@ -32,8 +32,8 @@
     <meta property="og:title" content="InternSpark Internship Program | Online Internships with Certificate">
     <meta property="og:description"
         content="Apply for InternSpark online internship programs. Learn by working on real projects, get verified certificates, and build job-ready skills. Powered by Alfido Tech.">
-    <meta property="og:url" content="https://www.internspark.in//">
-    <meta property="og:image" content="https://www.internspark.in//img/og-home.webp">
+    <meta property="og:url" content="https://internspark.in/">
+    <meta property="og:image" content="https://internspark.in/img/og-home.webp">
     <meta property="og:site_name" content="InternSpark">
 
     <!-- ================= TWITTER CARD ================= -->
@@ -41,7 +41,7 @@
     <meta name="twitter:title" content="InternSpark Internship Program | Learn, Build & Get Certified">
     <meta name="twitter:description"
         content="Project-based online internships for students & freshers. Gain practical skills and verified certificates with InternSpark.">
-    <meta name="twitter:image" content="https://www.internspark.in//img/og-image.jpg">
+    <meta name="twitter:image" content="https://internspark.in/img/og-image.jpg">
 
 
 
@@ -65,7 +65,7 @@
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-519NNPN4L1"></script>
-    <script>
+    <script defer>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
@@ -78,10 +78,10 @@
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://www.internspark.in//#organization",
+      "@id": "https://internspark.in/#organization",
       "name": "InternSpark",
-      "url": "https://www.internspark.in//",
-      "logo": "https://www.internspark.in//img/logo.webp",
+      "url": "https://internspark.in/",
+      "logo": "https://internspark.in/img/logo.webp",
       "description": "InternSpark is a skill-first internship and certificate verification platform helping students practice skills, verify internships, and build proof of work.",
       "sameAs": [
         "https://www.instagram.com/internspark1",
@@ -93,32 +93,32 @@
     },
     {
       "@type": "WebSite",
-      "@id": "https://www.internspark.in//#website",
-      "url": "https://www.internspark.in//",
+      "@id": "https://internspark.in/#website",
+      "url": "https://internspark.in/",
       "name": "InternSpark",
       "publisher": {
-        "@id": "https://www.internspark.in//#organization"
+        "@id": "https://internspark.in/#organization"
       },
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://www.internspark.in//?s={search_term_string}",
+        "target": "https://internspark.in/?s={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     },
     {
       "@type": ".webpage",
-      "@id": "https://www.internspark.in//#homepage",
-      "url": "https://www.internspark.in//",
+      "@id": "https://internspark.in/#homepage",
+      "url": "https://internspark.in/",
       "name": "InternSpark Internship Program | Skill-First Career Platform",
       "isPartOf": {
-        "@id": "https://www.internspark.in//#website"
+        "@id": "https://internspark.in/#website"
       },
       "about": {
-        "@id": "https://www.internspark.in//#organization"
+        "@id": "https://internspark.in/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.internspark.in//img/og-image.jpg."
+        "url": "https://internspark.in/img/og-image.jpg."
       }
     },
     {
@@ -129,43 +129,43 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Certificate Verification Portal",
-          "url": "https://www.internspark.in//certificate.html"
+          "url": "https://internspark.in/certificate.html"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Apply Internship",
-          "url": "https://www.internspark.in//internship.html"
+          "url": "https://internspark.in/internship.html"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Intern Profile",
-          "url": "https://www.internspark.in//internProfile.html"
+          "url": "https://internspark.in/internProfile.html"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "Internship Task Submission",
-          "url": "https://www.internspark.in//submission.html"
+          "url": "https://internspark.in/submission.html"
         },
         {
           "@type": "ListItem",
           "position": 5,
           "name": "Assessment",
-          "url": "https://www.internspark.in//assessment.html"
+          "url": "https://internspark.in/assessment.html"
         },
         {
           "@type": "ListItem",
           "position": 6,
           "name": "Explore Internship Domains",
-          "url": "https://www.internspark.in//domains.html"
+          "url": "https://internspark.in/domains.html"
         },
         {
           "@type": "ListItem",
           "position": 7,
           "name": "Explore Tasks by Domain",
-          "url": "https://www.internspark.in//task.html"
+          "url": "https://internspark.in/task.html"
         }
       ]
     }
@@ -591,6 +591,14 @@
             /* footer ke liye ideal */
             width: auto;
             object-fit: contain;
+        }
+
+        @media(max-width:768px) {
+            .reveal {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
         }
     </style>
 
@@ -1621,9 +1629,9 @@
             <!-- Bottom Bar -->
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center">
                 <p class="mb-2 mb-md-0 text-secondary small">
-                © 2026 InternSpark | Operated under <a href="https://alfidotech.com">Alfido Tech</a>
-                MSME (Udyam) Registration No: UDYAM-MP-10-0066163
-            </p>
+                    © 2026 InternSpark | Operated under <a href="https://alfidotech.com">Alfido Tech</a>
+                    MSME (Udyam) Registration No: UDYAM-MP-10-0066163
+                </p>
                 <p class="text-secondary small mb-0">
                     Made with ❤️ for learners
                 </p>
@@ -1674,16 +1682,26 @@
 
 
     <!-- ================= JS ================= -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', e => {
-                e.preventDefault();
-                const target = document.querySelector(anchor.getAttribute('href'));
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('a[href^="#"]:not([data-bs-toggle])').forEach(anchor => {
+                anchor.addEventListener('click', e => {
+                    const targetId = anchor.getAttribute('href');
+                    if (targetId === "#") return;
+
+                    const target = document.querySelector(targetId);
+                    if (!target) return;
+
+                    e.preventDefault();
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                });
             });
         });
+
 
         // Scroll animations
         const obs = new IntersectionObserver(e => {
@@ -1692,15 +1710,27 @@
             });
         }, { threshold: 0.15 });
 
-        document.querySelectorAll(".reveal").forEach(el => obs.observe(el));
+        if (window.innerWidth > 768) {
+            document.querySelectorAll(".reveal").forEach(el => obs.observe(el));
+        }
+
 
         // Navbar scroll effect
+        let ticking = false;
+
         window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            navbar.style.background = window.scrollY > 50
-                ? 'rgba(15,15,35,0.95)'
-                : 'rgba(0,0,0,0.75)';
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const navbar = document.querySelector('.navbar');
+                    navbar.style.background = window.scrollY > 50
+                        ? 'rgba(15,15,35,0.95)'
+                        : 'rgba(0,0,0,0.75)';
+                    ticking = false;
+                });
+                ticking = true;
+            }
         });
+
 
         // Chatbot functionality
         const chatToggle = document.getElementById('chatToggle');
