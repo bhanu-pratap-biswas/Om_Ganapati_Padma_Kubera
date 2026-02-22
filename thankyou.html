@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thank You - InternSpark</title>
 
-  
 
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
 
   <style>
     :root {
-      --brand-red: #d43635;
-      --brand-red-dark: #a82b2b;
-      --soft-bg: #fff5f5;
+      --primary: #FFC107;
+      --primary-dark: #e0a800;
+      --dark: #0f0f23;
+      --light-bg: #fffdf5;
     }
 
     * {
@@ -31,239 +28,163 @@
       font-family: "Poppins", sans-serif;
       min-height: 100vh;
       margin: 0;
-      padding: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: radial-gradient(circle at top left, #ffe0e0, #fff5f5 40%, #ffeaea 80%);
+      background: linear-gradient(135deg, #fff8dc, #fff3cd, #ffffff);
       overflow: hidden;
       position: relative;
     }
 
-    /* Decorative blobs */
+    /* Modern Floating Gradient Orbs */
     .blob {
       position: absolute;
       border-radius: 50%;
-      filter: blur(40px);
-      opacity: 0.6;
+      filter: blur(80px);
+      opacity: 0.5;
       z-index: 0;
     }
 
     .blob-1 {
-      width: 260px;
-      height: 260px;
-      background: rgba(212, 54, 53, 0.5);
-      top: -60px;
-      left: -40px;
+      width: 300px;
+      height: 300px;
+      background: #ffe082;
+      top: -80px;
+      left: -60px;
     }
 
     .blob-2 {
-      width: 220px;
-      height: 220px;
-      background: rgba(255, 168, 168, 0.6);
-      bottom: -70px;
-      right: -40px;
+      width: 260px;
+      height: 260px;
+      background: #ffd54f;
+      bottom: -80px;
+      right: -60px;
     }
 
+    /* Glass Card */
     .thank-box {
       position: relative;
       width: 100%;
-      max-width: 420px;
-      background: rgba(255, 255, 255, 0.92);
-      padding: 34px 24px 28px;
-      border-radius: 22px;
+      max-width: 430px;
+      padding: 40px 30px;
+      border-radius: 26px;
       text-align: center;
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(14px);
-      animation: floatIn 0.7s ease-out;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+      animation: fadeUp 0.7s ease;
       z-index: 1;
     }
 
-    .thank-box::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      border-top: 4px solid var(--brand-red);
-      pointer-events: none;
-    }
-
+    /* Success Icon */
     .success-icon {
-      width: 70px;
-      height: 70px;
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 18px;
       border-radius: 50%;
-      margin: 0 auto 14px;
-      border: 3px solid rgba(212, 54, 53, 0.2);
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
-      background: radial-gradient(circle at 30% 20%, #ffe9e9, #ffc9c9);
-      animation: pulse 1.6s infinite ease-in-out;
+      background: linear-gradient(135deg, #fff176, #ffc107);
+      color: var(--dark);
+      font-size: 2rem;
+      font-weight: bold;
+      box-shadow: 0 10px 25px rgba(255, 193, 7, 0.4);
+      animation: pulse 2s infinite;
     }
 
-    .success-icon::before {
-      content: "";
-      position: absolute;
-      inset: -8px;
-      border-radius: inherit;
-      border: 2px dashed rgba(212, 54, 53, 0.25);
-      animation: spin 6s linear infinite;
-    }
-
-    .success-icon span {
-      font-size: 1.8rem;
-      color: var(--brand-red);
-    }
-
+    /* Headings */
     h1 {
-      font-size: 1.9rem;
       font-weight: 700;
-      color: var(--brand-red);
-      margin-bottom: 6px;
+      font-size: 2rem;
+      color: var(--dark);
+      margin-bottom: 8px;
     }
 
     .sub-heading {
       font-size: 0.95rem;
-      font-weight: 500;
-      color: #555;
-      margin-bottom: 4px;
-    }
-
-    p {
-      font-size: 0.9rem;
       color: #555;
       margin-bottom: 10px;
     }
 
     .highlight {
+      color: var(--primary-dark);
       font-weight: 600;
-      color: var(--brand-red-dark);
     }
 
+    /* Info Box */
     .info-box {
-      background: #ffe8e8;
-      border-left: 4px solid var(--brand-red);
-      padding: 12px 14px;
-      border-radius: 10px;
-      font-size: 0.9rem;
-      margin: 14px 0 10px;
+      background: rgba(255, 193, 7, 0.15);
+      border: 1px solid rgba(255, 193, 7, 0.3);
+      padding: 14px;
+      border-radius: 14px;
+      margin: 18px 0 14px;
       text-align: left;
-      color: #333;
+      font-size: 0.9rem;
     }
 
-    .info-box b {
-      font-weight: 600;
-    }
-
+    /* Button */
     .btn-red {
-      background: var(--brand-red);
-      color: #fff;
-      padding: 11px 24px;
-      border-radius: 999px;
-      border: none;
-      font-size: 0.95rem;
+      background: linear-gradient(135deg, #ffc107, #ffb300);
+      color: #000;
+      padding: 13px 28px;
+      border-radius: 50px;
       font-weight: 600;
+      text-decoration: none;
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      gap: 6px;
-      margin-top: 14px;
-      text-decoration: none;
-      transition: 0.25s ease;
-      box-shadow: 0 8px 18px rgba(212, 54, 53, 0.35);
+      gap: 8px;
+      transition: 0.3s ease;
+      box-shadow: 0 10px 30px rgba(255, 193, 7, 0.4);
     }
 
     .btn-red:hover {
-      background: var(--brand-red-dark);
-      color: #fff;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 24px rgba(212, 54, 53, 0.45);
+      transform: translateY(-3px);
+      box-shadow: 0 14px 35px rgba(255, 193, 7, 0.55);
     }
 
-    .btn-red:active {
-      transform: translateY(0);
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
-    }
-
+    /* Back Link */
     .btn-secondary-link {
-      margin-top: 12px;
-      font-size: 0.88rem;
       display: inline-block;
-      color: #666;
+      margin-top: 18px;
+      font-size: 0.9rem;
       text-decoration: none;
+      color: #444;
     }
 
     .btn-secondary-link span {
-      color: var(--brand-red);
       font-weight: 600;
+      color: var(--primary-dark);
     }
 
     .btn-secondary-link:hover span {
       text-decoration: underline;
     }
 
-    /* Floating WhatsApp Button */
-    #whatsapp-btn {
-      position: fixed;
-      bottom: 18px;
-      right: 18px;
-      z-index: 999;
-    }
-
-    #whatsapp-btn img {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    #whatsapp-btn img:hover {
-      transform: translateY(-3px) scale(1.03);
-      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.32);
-    }
-
-    @keyframes floatIn {
+    /* Animations */
+    @keyframes fadeUp {
       from {
         opacity: 0;
-        transform: translateY(16px) scale(0.98);
+        transform: translateY(20px);
       }
+
       to {
         opacity: 1;
-        transform: translateY(0) scale(1);
+        transform: translateY(0);
       }
     }
 
     @keyframes pulse {
       0% {
         transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(212, 54, 53, 0.4);
       }
-      70% {
-        transform: scale(1.05);
-        box-shadow: 0 0 0 14px rgba(212, 54, 53, 0);
+
+      50% {
+        transform: scale(1.07);
       }
+
       100% {
         transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(212, 54, 53, 0);
-      }
-    }
-
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    @media (max-width: 400px) {
-      .thank-box {
-        padding: 26px 18px 22px;
-        border-radius: 18px;
-      }
-      h1 {
-        font-size: 1.6rem;
       }
     }
   </style>
@@ -297,11 +218,8 @@
       <b>Domain:</b> ??<br />
     </div>
 
-    <a
-      href="https://api.whatsapp.com/send?phone=917093639415&text=I%20Confirm%20My%20Details%20For%20Certificate%0A%0AName%20%3F%3F%0ADomain%20%3F%3F%0A%0AAlfido%C2%A0Tech%C2%A0Team"
-      class="btn-red"
-      target="_blank"
-    >
+    <a href="https://api.whatsapp.com/send?phone=917093639415&text=I%20Confirm%20My%20Details%20For%20Certificate%0A%0AName%20%3F%3F%0ADomain%20%3F%3F%0A%0A*InternSpark%20Team*"
+      class="btn-red" target="_blank">
       <span>Confirm on WhatsApp</span> 📲
     </a>
 
@@ -313,17 +231,13 @@
   </div>
 
   <!-- Floating WhatsApp Button -->
-  <div id="whatsapp-btn">
-    <a
-  href="https://api.whatsapp.com/send?phone=917093639415&text=I%20Confirm%20My%20Details%20For%20Certificate%0A%0AName%20%3F%3F%0ADomain%20%3F%3F%0A%0AInternSpark%20Team"
-  target="_blank"
->
+  <!-- <div id="whatsapp-btn">
+    <a href="https://api.whatsapp.com/send?phone=917093639415&text=I%20Confirm%20My%20Details%20For%20Certificate%0A%0AName%20%3F%3F%0ADomain%20%3F%3F%0A%0AInternSpark%20Team"
+      target="_blank">
 
-      <img
-        src="https://www.freepnglogos.com/uploads/whatsapp-logo-png-hd-2.webp"
-        alt="WhatsApp"
-      />
+      <img src="https://www.freepnglogos.com/uploads/whatsapp-logo-png-hd-2.webp" alt="WhatsApp" />
     </a>
-  </div>
+  </div> -->
 </body>
+
 </html>
