@@ -3,12 +3,13 @@
 
   <!-- ================= CORE PAGES ================= -->
   <url><loc>https://internspark.in/</loc></url>
-  <url><loc>https://internspark.in/task.html</loc></url>
   <url><loc>https://internspark.in/internship.html</loc></url>
-  <url><loc>https://internspark.in/internProfile.html</loc></url>
   <url><loc>https://internspark.in/submission.html</loc></url>
-  <url><loc>https://internspark.in/certificate.html</loc></url>
+  <url><loc>https://internspark.in/domains.html</loc></url>
   <url><loc>https://internspark.in/assessment.html</loc></url>
+  <url><loc>https://internspark.in/internProfile.html</loc></url>
+  <url><loc>https://internspark.in/task.html</loc></url>
+  <url><loc>https://internspark.in/certificate.html</loc></url>
   <url><loc>https://internspark.in/contact.html</loc></url>
   <url><loc>https://internspark.in/about.html</loc></url>
   <url><loc>https://internspark.in/offer-letter.html</loc></url>
@@ -16,7 +17,6 @@
   <url><loc>https://internspark.in/report-card.html</loc></url>
   <url><loc>https://internspark.in/blog.html</loc></url>
   <url><loc>https://internspark.in/code-editor.html</loc></url>
-  <url><loc>https://internspark.in/domains.html</loc></url>
   <url><loc>https://internspark.in/faq.html</loc></url>
 
   <!-- ================= LEGAL ================= -->
@@ -69,74 +69,5 @@
   <url><loc>https://internspark.in/quiz/cloud.html</loc></url>
   <url><loc>https://internspark.in/quiz/devops.html</loc></url>
 
-  <!-- ================= CORE PAGES ================= -->
-  <url><loc>https://www.internspark.in/</loc></url>
-  <url><loc>https://www.internspark.in/task.html</loc></url>
-  <url><loc>https://www.internspark.in/internship.html</loc></url>
-  <url><loc>https://www.internspark.in/internProfile.html</loc></url>
-  <url><loc>https://www.internspark.in/submission.html</loc></url>
-  <url><loc>https://www.internspark.in/certificate.html</loc></url>
-  <url><loc>https://www.internspark.in/assessment.html</loc></url>
-  <url><loc>https://www.internspark.in/contact.html</loc></url>
-  <url><loc>https://www.internspark.in/about.html</loc></url>
-  <url><loc>https://www.internspark.in/offer-letter.html</loc></url>
-  <url><loc>https://www.internspark.in/lor.html</loc></url>
-  <url><loc>https://www.internspark.in/report-card.html</loc></url>
-  <url><loc>https://www.internspark.in/blog.html</loc></url>
-  <url><loc>https://www.internspark.in/code-editor.html</loc></url>
-  <url><loc>https://www.internspark.in/domains.html</loc></url>
-  <url><loc>https://www.internspark.in/faq.html</loc></url>
-
-  <!-- ================= LEGAL ================= -->
-  <url><loc>https://www.internspark.in/privacy-policy.html</loc></url>
-  <url><loc>https://www.internspark.in/terms.html</loc></url>
-  <url><loc>https://www.internspark.in/refund.html</loc></url>
-  <url><loc>https://www.internspark.in/disclaimer.html</loc></url>
-  <url><loc>https://www.internspark.in/accessibility.html</loc></url>
-
-  <!-- ================= TASK / DOMAIN PAGES ================= -->
-  <url><loc>https://www.internspark.in/task/ASP.NETdeveloper.html</loc></url>
-  <url><loc>https://www.internspark.in/task/VLSI.html</loc></url>
-  <url><loc>https://www.internspark.in/task/cloud_computing.html</loc></url>
-  <url><loc>https://www.internspark.in/task/cybersecurity.html</loc></url>
-  <url><loc>https://www.internspark.in/task/devops.html</loc></url>
-  <url><loc>https://www.internspark.in/task/digitalmarketing.html</loc></url>
-  <url><loc>https://www.internspark.in/task/embedded_systems.html</loc></url>
-  <url><loc>https://www.internspark.in/task/frontend_developer.html</loc></url>
-  <url><loc>https://www.internspark.in/task/javadeveloper.html</loc></url>
-  <url><loc>https://www.internspark.in/task/mern.html</loc></url>
-  <url><loc>https://www.internspark.in/task/pythondeveloper.html</loc></url>
-  <url><loc>https://www.internspark.in/task/reactdeveloper.html</loc></url>
-  <url><loc>https://www.internspark.in/task/uxui.html</loc></url>
-  <url><loc>https://www.internspark.in/task/artificial_integence.html</loc></url>
-  <url><loc>https://www.internspark.in/task/androiddeveloper.html</loc></url>
-  <url><loc>https://www.internspark.in/task/CProgramming.html</loc></url>
-  <url><loc>https://www.internspark.in/task/data_analyst.html</loc></url>
-  <url><loc>https://www.internspark.in/task/data_science.html</loc></url>
-  <url><loc>https://www.internspark.in/task/machine_learning.html</loc></url>
-
-  <!-- ================= QUIZ PAGES ================= -->
-  <url><loc>https://www.internspark.in/quiz/frontend.html</loc></url>
-  <url><loc>https://www.internspark.in/quiz/reactjs.html</loc></url>
-  <url><loc>https://www.internspark.in/quiz/mern.html</loc></url>
-  <url><loc>https://www.internspark.in/quiz/python.html</loc></url>
-  <url><loc>https://www.internspark.in/quiz/cpp.html</loc></url>
-  <url><loc>https://www.internspark.in/quiz/java.html</loc></url>
-  <url><loc>https://www.internspark.in/quiz/dotnet.html</loc></url>
-  <url><loc>https://www.internspark.in/quiz/data-analytics.html</loc></url>
-  <url><loc>https://www.internspark.in/quiz/business-analytics.html</loc></url>
-  <url><loc>https://www.internspark.in/quiz/data-science.html</loc></url>
-  <url><loc>https://www.internspark.in/quiz/ai.html</loc></url>
-  <url><loc>https://www.internspark.in/quiz/digital-marketing.html</loc></url>
-  <url><loc>https://www.internspark.in/quiz/ml.html</loc></url>
-  <url><loc>https://www.internspark.in/quiz/cybersecurity.html</loc></url>
-  <url><loc>https://www.internspark.in/quiz/uiux.html</loc></url>
-  <url><loc>https://www.internspark.in/quiz/android.html</loc></url>
-  <url><loc>https://www.internspark.in/quiz/vlsi.html</loc></url>
-  <url><loc>https://www.internspark.in/quiz/embedded.html</loc></url>
-  <url><loc>https://www.internspark.in/quiz/cloud.html</loc></url>
-  <url><loc>https://www.internspark.in/quiz/devops.html</loc></url>
-
-  
 
 </urlset>
