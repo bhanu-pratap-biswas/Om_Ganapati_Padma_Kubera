@@ -60,14 +60,24 @@
 
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-519NNPN4L1"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+        window.addEventListener('load', function () {
 
-        gtag('config', 'G-519NNPN4L1');
+            var s = document.createElement('script');
+            s.src = "https://www.googletagmanager.com/gtag/js?id=G-519NNPN4L1";
+            s.async = true;
+            document.body.appendChild(s);
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            window.gtag = gtag;
+
+            gtag('js', new Date());
+            gtag('config', 'G-519NNPN4L1');
+
+        });
     </script>
+
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -118,442 +128,42 @@
 </script>
 
 
-    <!-- Bootstrap -->
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <!-- Font Awesome -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style"
-        onload="this.rel='stylesheet'">
-    <!-- Google Font -->
+    <!-- ================= CSS OPTIMIZED LOADING ================= -->
+
+    <!-- Bootstrap (Non-blocking safe load) -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" as="style">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" media="print"
+        onload="this.media='all'">
+
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    </noscript>
+
+
+    <!-- Font Awesome (Load async safe way) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        media="print" onload="this.media='all'">
+
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </noscript>
+
+
+    <!-- Google Fonts Optimized -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
-        onload="this.rel='stylesheet'">
 
-    <style>
-        /* ================= ROOT ================= */
-        :root {
-            --yellow: #FFC107;
-            --dark: #0f0f23;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet"
+        media="print" onload="this.media='all'">
 
-        /* ================= BASE ================= */
-        * {
-            box-sizing: border-box
-        }
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+            rel="stylesheet">
+    </noscript>
 
-        html {
-            scroll-padding-top: 100px
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: var(--dark);
-            color: #fff;
-            overflow-x: hidden;
-            padding-top: 84px;
-            /* FIXED NAVBAR SPACE */
-        }
-
-        a {
-            text-decoration: none
-        }
-
-        /* ================= NAVBAR ================= */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            min-height: 84px;
-            background: rgba(15, 15, 35, .95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, .1);
-            z-index: 1100;
-            padding: .75rem 0;
-        }
-
-        .navbar-brand {
-            display: flex;
-            align-items: center;
-            gap: 10px
-        }
-
-        /* ================= HERO ================= */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
-            position: relative;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(circle at 20% 80%, rgba(255, 193, 7, .1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, .05) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
-        .hero .container {
-            position: relative;
-            z-index: 2
-        }
-
-        .hero h2 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            font-weight: 800;
-            line-height: 1.1;
-        }
-
-        .hero .lead {
-            font-size: 1.4rem;
-            opacity: .95
-        }
-
-        /* ================= HERO BADGES ================= */
-        .hero-badge {
-            background: rgba(255, 193, 7, .15);
-            color: #FFC107;
-            border: 1px solid rgba(255, 193, 7, .45);
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 14px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            backdrop-filter: blur(6px);
-        }
-
-        /* ================= ANIMATIONS ================= */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: .8s cubic-bezier(.25, .46, .45, .94);
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: none;
-        }
-
-        .float {
-            animation: float 4s ease-in-out infinite
-        }
-
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0)
-            }
-
-            50% {
-                transform: translateY(-12px)
-            }
-        }
-
-        /* ================= BUTTONS ================= */
-        .btn-yellow {
-            background: linear-gradient(45deg, #FFC107, #FFD54F);
-            color: #000;
-            font-weight: 700;
-            border: none;
-            padding: 14px 34px;
-            border-radius: 50px;
-            box-shadow: 0 15px 35px rgba(255, 193, 7, .45);
-            transition: .3s;
-        }
-
-        .btn-yellow:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 25px 50px rgba(255, 193, 7, .6);
-        }
-
-        /* ================= GLASS ================= */
-        .glass-primary {
-            background: rgba(255, 193, 7, .15);
-            backdrop-filter: blur(18px);
-            border: 1px solid rgba(255, 193, 7, .35);
-            border-radius: 22px;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, .4);
-        }
-
-        /* ================= SECTIONS ================= */
-        .py-5 {
-            padding: 5rem 0 !important
-        }
-
-        .bg-light {
-            background: rgba(255, 255, 255, .03) !important
-        }
-
-        /* ================= DOMAIN CARDS ================= */
-        .domain-card {
-            background: rgba(255, 255, 255, .08);
-            border: 1px solid rgba(255, 255, 255, .15);
-            backdrop-filter: blur(16px);
-            border-radius: 20px;
-            padding: 2.5rem 2rem;
-            transition: .4s;
-            height: 100%;
-        }
-
-        .domain-card:hover {
-            transform: translateY(-15px);
-            border-color: var(--yellow);
-            box-shadow: 0 30px 60px rgba(255, 193, 7, .2);
-        }
-
-        .domain-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 193, 7, .25);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--yellow);
-            font-size: 1.4rem;
-            margin: 0 auto 20px;
-        }
-
-        /* ================= APPLY BUTTON ================= */
-        .btn-apply {
-            background: linear-gradient(45deg, var(--yellow), #FFD54F);
-            color: #000;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 700;
-            width: 100%;
-        }
-
-        /* ================= SERVICES ================= */
-        .service-card {
-            border: 1px solid rgba(255, 255, 255, .1);
-            border-radius: 25px;
-            padding: 3rem 2rem;
-            text-align: center;
-            backdrop-filter: blur(10px);
-            transition: .3s;
-        }
-
-        .service-card:hover {
-            border-color: var(--yellow);
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(255, 193, 7, .2);
-        }
-
-        .service-icon {
-            transition: .35s
-        }
-
-        .service-card:hover .service-icon {
-            transform: scale(1.15) rotate(5deg);
-        }
-
-        /* ================= FORMS ================= */
-        .form-control,
-        .form-select {
-            background: rgba(255, 255, 255, .08) !important;
-            border: 1px solid rgba(255, 255, 255, .2) !important;
-            color: #fff !important;
-            border-radius: 15px;
-        }
-
-        .form-control::placeholder {
-            color: #ccc !important
-        }
-
-        .form-control:focus,
-        .form-select:focus {
-            background: rgba(255, 255, 255, .12) !important;
-            border-color: var(--yellow) !important;
-            box-shadow: 0 0 0 .2rem rgba(255, 193, 7, .25) !important;
-        }
-
-        /* ================= CHATBOT ================= */
-        .chatbot-toggle {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(45deg, var(--yellow), #FFD54F);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 15px 40px rgba(255, 193, 7, .5);
-            z-index: 1050;
-            color: #000;
-            font-size: 1.5rem;
-        }
-
-        .chatbot-panel {
-            position: fixed;
-            bottom: 110px;
-            right: 30px;
-            width: 380px;
-            height: 500px;
-            background: rgba(255, 255, 255, .95);
-            border-radius: 25px;
-            box-shadow: 0 25px 70px rgba(0, 0, 0, .3);
-            display: none;
-            flex-direction: column;
-            z-index: 1051;
-        }
-
-        /* ================= FOOTER ================= */
-        footer {
-            background: linear-gradient(180deg, #0b0b1c 0%, #0f0f23 100%);
-            border-top: 1px solid rgba(255, 255, 255, .05);
-        }
-
-        .footer-link {
-            color: #ccc
-        }
-
-        .footer-link:hover {
-            color: var(--yellow)
-        }
-
-        /* ================= DROPDOWN ================= */
-        .dropdown-menu {
-            background: rgba(15, 15, 35, .98);
-            backdrop-filter: blur(20px);
-        }
-
-        .dropdown-item {
-            color: #eee;
-            font-weight: 500;
-        }
-
-        .dropdown-item:hover,
-        .dropdown-item.active {
-            background: rgba(255, 193, 7, .2);
-            color: #FFC107;
-        }
-
-        /* ================= MOBILE ================= */
-        @media(max-width:768px) {
-            body {
-                padding-top: 96px
-            }
-
-            .hero {
-                text-align: center
-            }
-
-            .domain-card {
-                padding: 2rem 1.5rem
-            }
-
-            .chatbot-panel {
-                right: 20px;
-                width: calc(100vw - 40px)
-            }
-
-            .float {
-                animation: none
-            }
-        }
-
-        /* ================= CHATBOT FIX ================= */
-        .chatbot-messages {
-            flex: 1;
-            padding: 15px;
-            overflow-y: auto;
-            background: #f7f7f7;
-        }
-
-        .message {
-            max-width: 80%;
-            padding: 10px 14px;
-            margin-bottom: 10px;
-            border-radius: 16px;
-            font-size: 14px;
-            line-height: 1.4;
-            word-wrap: break-word;
-        }
-
-        .message.user {
-            background: #ffc107;
-            color: #000;
-            margin-left: auto;
-            border-bottom-right-radius: 4px;
-        }
-
-        .message.bot {
-            background: #ffffff;
-            color: #000;
-            border: 1px solid #ddd;
-            margin-right: auto;
-            border-bottom-left-radius: 4px;
-        }
-
-        #chatInput {
-            background: #ffffff !important;
-            color: #000000 !important;
-            border: 2px solid #FFC107;
-        }
-
-        #chatInput::placeholder {
-            color: #555;
-        }
-
-        .footer-link {
-            color: #bfc3d1;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .footer-link:hover {
-            color: #FFC107;
-        }
-
-        .footer-social {
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            background: rgba(255, 193, 7, 0.15);
-            color: #FFC107;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: 0.3s;
-        }
-
-        .footer-social:hover {
-            background: #FFC107;
-            color: #000;
-            transform: translateY(-3px);
-        }
-
-        .footer-logo {
-            height: 90px;
-            /* footer ke liye ideal */
-            width: auto;
-            object-fit: contain;
-        }
-
-        .visually-hidden {
-            position: absolute !important;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-    </style>
+    <link rel="preload" href="/css/main.min.css" as="style">
+    <link rel="stylesheet" href="/css/main.min.css">
 
 </head>
 
@@ -565,8 +175,7 @@
             <!-- Logo -->
             <a class="navbar-brand d-flex align-items-center fw-bold fs-3" href="#">
 
-                <img src="img/navbar-logo.webp" alt="InternSpark Logo" width="180" height="70" loading="eager"
-                    class="me-2">
+                <img src="img/navbar-logo.webp" width="180" height="70" loading="lazy" fetchpriority="low" class="me-2">
                 <!-- <span style="color:var(--yellow)">Intern<span style="color:#fff">Spark</span> </span> -->
             </a>
 
@@ -652,14 +261,14 @@
 
                         <!-- Trust Badge -->
                         <span class="badge bg-warning text-dark px-3 py-2 fs-6 mb-3">
-                            Powered by <a href="https://alfidotech.com" class="text-dark">Alfido Tech</a>
+                            Powered by <a href="https://alfidotech.com" class="text-dark" target="_blank" rel="noopener">Alfido Tech</a>
                         </span>
 
                         <h1 class="visually-hidden">
                             InternSpark (Intern Spark) Internship Program – Online Internships with Certificate in India
                         </h1>
 
-                        <h2 class="mt-3 display-3 fw-bold">
+                        <h2 class="mt-3 display-3 fw-bold" fetchpriority="high">
                             Launch Your<br>
                             <span style="color:var(--yellow)">Career Spark</span>
                         </h2>
@@ -1347,9 +956,9 @@
 
                 <!-- IMAGE -->
                 <div class="col-lg-6 text-center">
-                    <img src="img/about.webp" width="600" height="500" loading="lazy"
-                        class="img-fluid rounded-4 shadow-lg reveal" alt="InternSpark Internship Program" loading="lazy"
-                        style="transform:scale(1.03)">
+                    <img src="img/about.webp" width="600" height="500" loading="lazy" decoding="async"
+                        class="img-fluid rounded-4 shadow-lg reveal" alt="InternSpark Internship Program"
+                        style="transform:scale(1.03);">
                 </div>
 
             </div>
@@ -1644,141 +1253,166 @@
     <!-- ================= JS ================= -->
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Smooth scrolling (safe version)
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+        document.addEventListener("DOMContentLoaded", function () {
 
-                const targetId = this.getAttribute('href');
+            /* ================= SMOOTH SCROLL ================= */
 
-                // Ignore if only "#"
-                if (targetId.length > 1) {
-                    const target = document.querySelector(targetId);
+            const navbarHeight = 84;
 
-                    if (target) {
-                        e.preventDefault();
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
+            document.querySelectorAll('a[href^="#"]:not([href="#"])')
+                .forEach(anchor => {
+
+                    anchor.addEventListener("click", function (e) {
+
+                        const target = document.querySelector(this.getAttribute("href"));
+
+                        if (target) {
+                            e.preventDefault();
+
+                            const offsetTop = target.offsetTop - navbarHeight;
+
+                            window.scrollTo({
+                                top: offsetTop,
+                                behavior: "smooth"
+                            });
+                        }
+
+                    });
+
+                });
+
+
+            /* ================= SCROLL REVEAL ================= */
+
+            const revealElements = document.querySelectorAll(".reveal");
+
+            if ("IntersectionObserver" in window && revealElements.length > 0) {
+
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("active");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.15 });
+
+                revealElements.forEach(el => observer.observe(el));
+            }
+
+
+            /* ================= NAVBAR SCROLL EFFECT ================= */
+
+            const navbar = document.querySelector(".navbar");
+            let ticking = false;
+
+            function updateNavbar() {
+                if (!navbar) return;
+
+                navbar.style.background =
+                    window.scrollY > 50
+                        ? "rgba(15,15,35,0.95)"
+                        : "rgba(0,0,0,0.75)";
+
+                ticking = false;
+            }
+
+            window.addEventListener("scroll", function () {
+                if (!ticking) {
+                    window.requestAnimationFrame(updateNavbar);
+                    ticking = true;
+                }
+            });
+
+
+            /* ================= CHATBOT ================= */
+
+            const chatToggle = document.getElementById('chatToggle');
+            const chatPanel = document.getElementById('chatPanel');
+            const chatInput = document.getElementById('chatInput');
+            const sendBtn = document.getElementById('sendBtn');
+            const chatMessages = document.getElementById('chatMessages');
+            const closeChat = document.getElementById('closeChat');
+
+            if (chatToggle && chatPanel) {
+
+                let greeted = false;
+
+                chatToggle.addEventListener('click', () => {
+                    const isOpen = chatPanel.style.display === 'flex';
+                    chatPanel.style.display = isOpen ? 'none' : 'flex';
+
+                    if (!greeted && !isOpen) {
+                        addMessage("👋 Hi! I’m InternSpark AI Assistant. Ask me about internships, domains, certificates or placements.");
+                        greeted = true;
                     }
+                });
+
+                closeChat.addEventListener('click', () => {
+                    chatPanel.style.display = 'none';
+                });
+
+                function addMessage(text, isUser = false) {
+                    const div = document.createElement('div');
+                    div.className = `message ${isUser ? 'user' : 'bot'}`;
+                    div.textContent = text;
+                    chatMessages.appendChild(div);
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
                 }
 
-            });
-        });
+                const botResponses = {
+                    'hi|hello|hey':
+                        '👋 Welcome to InternSpark! I can help you with internship domains, certificates, LOR, report cards, and application details.',
 
-        // Scroll animations
-        const obs = new IntersectionObserver(e => {
-            e.forEach(i => {
-                if (i.isIntersecting) i.target.classList.add("active");
-            });
-        }, { threshold: 0.15 });
+                    'domain|domains|field|course':
+                        '📚 InternSpark offers 19+ internship domains including Web Development, Data Analytics, AI Automation, Cloud, Cybersecurity, and more. Which domain would you like to explore?',
 
-        document.querySelectorAll(".reveal").forEach(el => obs.observe(el));
+                    'duration|time|weeks':
+                        '⏳ Internship duration is flexible and usually ranges from 4 to 8 weeks, depending on the selected domain.',
 
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            navbar.style.background = window.scrollY > 50
-                ? 'rgba(15,15,35,0.95)'
-                : 'rgba(0,0,0,0.75)';
-        });
+                    'apply|application|register':
+                        '📝 You can apply online by clicking the “Apply Now” button and filling out the registration form. The process takes less than 2 minutes.',
 
-        // Chatbot functionality
-        const chatToggle = document.getElementById('chatToggle');
-        const chatPanel = document.getElementById('chatPanel');
-        const chatInput = document.getElementById('chatInput');
-        const sendBtn = document.getElementById('sendBtn');
-        const chatMessages = document.getElementById('chatMessages');
-        const closeChat = document.getElementById('closeChat');
+                    'certificate|certification':
+                        '📜 Yes! After successful task completion, you will receive a verified Internship & Experience Certificate from InternSpark.',
 
-        let greeted = false;
+                    'lor|recommendation':
+                        '✉️ A Letter of Recommendation (LOR) may be provided to interns who demonstrate consistent performance and successfully complete assigned tasks.',
 
-        chatToggle.addEventListener('click', () => {
-            const isOpen = chatPanel.style.display === 'flex';
-            chatPanel.style.display = isOpen ? 'none' : 'flex';
+                    'report|report card|performance':
+                        '📊 Each intern receives a performance-based report card highlighting task completion, skills learned, and overall progress.',
 
-            if (!greeted && !isOpen) {
-                addMessage("👋 Hi! I’m InternSpark AI Assistant. Ask me about internships, domains, certificates or placements.");
-                greeted = true;
+                    'placement|job|salary|stipend':
+                        '🎯 InternSpark focuses on skill development and practical experience. While we do not guarantee jobs or stipends, we provide career guidance and project experience to improve employability.',
+
+                    'contact|support|help':
+                        '📞 For any assistance, you can reach out through our official website or support channels listed in the footer.',
+
+                    'default':
+                        '😊 Feel free to ask about internship domains, certificates, LOR, report cards, duration, or how to apply!'
+                };
+
+                function getBotReply(message) {
+                    const lower = message.toLowerCase();
+                    for (let pattern in botResponses) {
+                        if (new RegExp(pattern).test(lower)) return botResponses[pattern];
+                    }
+                    return botResponses.default;
+                }
+
+                function sendMessage() {
+                    const text = chatInput.value.trim();
+                    if (!text) return;
+                    addMessage(text, true);
+                    chatInput.value = '';
+                    setTimeout(() => addMessage(getBotReply(text)), 600);
+                }
+
+                sendBtn.addEventListener('click', sendMessage);
+                chatInput.addEventListener('keypress', e => e.key === 'Enter' && sendMessage());
             }
+
         });
-
-
-        closeChat.addEventListener('click', () => {
-            chatPanel.style.display = 'none';
-        });
-
-        function addMessage(text, isUser = false) {
-            const div = document.createElement('div');
-            div.className = `message ${isUser ? 'user' : 'bot'}`;
-            div.textContent = text;
-            chatMessages.appendChild(div);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }
-
-        const botResponses = {
-
-            'hi|hello|hey':
-                '👋 Welcome to InternSpark! I can help you with internship domains, certificates, LOR, report cards, and application details.',
-
-            'domain|domains|field|course':
-                '📚 InternSpark offers 19+ internship domains including Web Development, Data Analytics, AI Automation, Cloud, Cybersecurity, and more. Which domain would you like to explore?',
-
-            'duration|time|weeks':
-                '⏳ Internship duration is flexible and usually ranges from 4 to 8 weeks, depending on the selected domain.',
-
-            'apply|application|register':
-                '📝 You can apply online by clicking the “Apply Now” button and filling out the registration form. The process takes less than 2 minutes.',
-
-            'certificate|certification':
-                '📜 Yes! After successful task completion, you will receive a verified Internship & Experience Certificate from InternSpark.',
-
-            'lor|recommendation':
-                '✉️ A Letter of Recommendation (LOR) may be provided to interns who demonstrate consistent performance and successfully complete assigned tasks.',
-
-            'report|report card|performance':
-                '📊 Each intern receives a performance-based report card highlighting task completion, skills learned, and overall progress.',
-
-            'placement|job|salary|stipend':
-                '🎯 InternSpark focuses on skill development and practical experience. While we do not guarantee jobs or stipends, we provide career guidance and project experience to improve employability.',
-
-            'contact|support|help':
-                '📞 For any assistance, you can reach out through our official website or support channels listed in the footer.',
-
-            'default':
-                '😊 Feel free to ask about internship domains, certificates, LOR, report cards, duration, or how to apply!'
-        };
-
-
-        function getBotReply(message) {
-            const lower = message.toLowerCase();
-            for (let pattern in botResponses) {
-                if (new RegExp(pattern).test(lower)) return botResponses[pattern];
-            }
-            return botResponses.default;
-        }
-
-        function sendMessage() {
-            const text = chatInput.value.trim();
-            if (!text) return;
-            addMessage(text, true);
-            chatInput.value = '';
-            setTimeout(() => addMessage(getBotReply(text)), 800);
-        }
-
-        sendBtn.addEventListener('click', sendMessage);
-        chatInput.addEventListener('keypress', e => e.key === 'Enter' && sendMessage());
-
-        function submitForm() {
-            const form = document.getElementById('applyForm');
-            if (form.checkValidity()) {
-                alert('🎉 Application submitted! You will hear from us within 24 hours. 🚀');
-                bootstrap.Modal.getInstance(document.getElementById('applyModal')).hide();
-                form.reset();
-            } else {
-                alert('Please fill all required fields! ⭐');
-            }
-        }
     </script>
 </body>
 
