@@ -1,0 +1,421 @@
+/* ================= ROOT ================= */
+:root {
+    --yellow: #FFC107;
+    --dark: #0f0f23;
+}
+
+/* ================= BASE ================= */
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-padding-top: 100px
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--dark);
+    color: #fff;
+    overflow-x: hidden;
+    padding-top: 84px;
+    /* FIXED NAVBAR SPACE */
+}
+
+a {
+    text-decoration: none
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 84px;
+    background: rgba(15, 15, 35, .95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    z-index: 1100;
+    padding: .75rem 0;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+/* ================= HERO ================= */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 80%, rgba(255, 193, 7, .1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, .05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2
+}
+
+.hero h2 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.hero .lead {
+    font-size: 1.4rem;
+    opacity: .95
+}
+
+/* ================= HERO BADGES ================= */
+.hero-badge {
+    background: rgba(255, 193, 7, .15);
+    color: #FFC107;
+    border: 1px solid rgba(255, 193, 7, .45);
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    backdrop-filter: blur(6px);
+}
+
+/* ================= ANIMATIONS ================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: .8s cubic-bezier(.25, .46, .45, .94);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: none;
+}
+
+.float {
+    animation: float 4s ease-in-out infinite
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-12px)
+    }
+}
+
+/* ================= BUTTONS ================= */
+.btn-yellow {
+    background: linear-gradient(45deg, #FFC107, #FFD54F);
+    color: #000;
+    font-weight: 700;
+    border: none;
+    padding: 14px 34px;
+    border-radius: 50px;
+    box-shadow: 0 15px 35px rgba(255, 193, 7, .45);
+    transition: .3s;
+}
+
+.btn-yellow:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 50px rgba(255, 193, 7, .6);
+}
+
+/* ================= GLASS ================= */
+.glass-primary {
+    background: rgba(255, 193, 7, .15);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 193, 7, .35);
+    border-radius: 22px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, .4);
+}
+
+/* ================= SECTIONS ================= */
+.py-5 {
+    padding: 5rem 0 !important
+}
+
+.bg-light {
+    background: rgba(255, 255, 255, .03) !important
+}
+
+/* ================= DOMAIN CARDS ================= */
+.domain-card {
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .15);
+    backdrop-filter: blur(16px);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    transition: .4s;
+    height: 100%;
+}
+
+.domain-card:hover {
+    transform: translateY(-15px);
+    border-color: var(--yellow);
+    box-shadow: 0 30px 60px rgba(255, 193, 7, .2);
+}
+
+.domain-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 193, 7, .25);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--yellow);
+    font-size: 1.4rem;
+    margin: 0 auto 20px;
+}
+
+/* ================= APPLY BUTTON ================= */
+.btn-apply {
+    background: linear-gradient(45deg, var(--yellow), #FFD54F);
+    color: #000;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    width: 100%;
+}
+
+/* ================= SERVICES ================= */
+.service-card {
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 25px;
+    padding: 3rem 2rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: .3s;
+}
+
+.service-card:hover {
+    border-color: var(--yellow);
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(255, 193, 7, .2);
+}
+
+.service-icon {
+    transition: .35s
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.15) rotate(5deg);
+}
+
+/* ================= FORMS ================= */
+.form-control,
+.form-select {
+    background: rgba(255, 255, 255, .08) !important;
+    border: 1px solid rgba(255, 255, 255, .2) !important;
+    color: #fff !important;
+    border-radius: 15px;
+}
+
+.form-control::placeholder {
+    color: #ccc !important
+}
+
+.form-control:focus,
+.form-select:focus {
+    background: rgba(255, 255, 255, .12) !important;
+    border-color: var(--yellow) !important;
+    box-shadow: 0 0 0 .2rem rgba(255, 193, 7, .25) !important;
+}
+
+/* ================= CHATBOT ================= */
+.chatbot-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(45deg, var(--yellow), #FFD54F);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 40px rgba(255, 193, 7, .5);
+    z-index: 1050;
+    color: #000;
+    font-size: 1.5rem;
+}
+
+.chatbot-panel {
+    position: fixed;
+    bottom: 110px;
+    right: 30px;
+    width: 380px;
+    height: 500px;
+    background: rgba(255, 255, 255, .95);
+    border-radius: 25px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, .3);
+    display: none;
+    flex-direction: column;
+    z-index: 1051;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: linear-gradient(180deg, #0b0b1c 0%, #0f0f23 100%);
+    border-top: 1px solid rgba(255, 255, 255, .05);
+}
+
+.footer-link {
+    color: #ccc
+}
+
+.footer-link:hover {
+    color: var(--yellow)
+}
+
+/* ================= DROPDOWN ================= */
+.dropdown-menu {
+    background: rgba(15, 15, 35, .98);
+    backdrop-filter: blur(20px);
+}
+
+.dropdown-item {
+    color: #eee;
+    font-weight: 500;
+}
+
+.dropdown-item:hover,
+.dropdown-item.active {
+    background: rgba(255, 193, 7, .2);
+    color: #FFC107;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px) {
+    body {
+        padding-top: 96px
+    }
+
+    .hero {
+        text-align: center
+    }
+
+    .domain-card {
+        padding: 2rem 1.5rem
+    }
+
+    .chatbot-panel {
+        right: 20px;
+        width: calc(100vw - 40px)
+    }
+
+    .float {
+        animation: none
+    }
+}
+
+/* ================= CHATBOT FIX ================= */
+.chatbot-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background: #f7f7f7;
+}
+
+.message {
+    max-width: 80%;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    border-radius: 16px;
+    font-size: 14px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.message.user {
+    background: #ffc107;
+    color: #000;
+    margin-left: auto;
+    border-bottom-right-radius: 4px;
+}
+
+.message.bot {
+    background: #ffffff;
+    color: #000;
+    border: 1px solid #ddd;
+    margin-right: auto;
+    border-bottom-left-radius: 4px;
+}
+
+#chatInput {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 2px solid #FFC107;
+}
+
+#chatInput::placeholder {
+    color: #555;
+}
+
+.footer-link {
+    color: #bfc3d1;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-link:hover {
+    color: #FFC107;
+}
+
+.footer-social {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255, 193, 7, 0.15);
+    color: #FFC107;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.footer-social:hover {
+    background: #FFC107;
+    color: #000;
+    transform: translateY(-3px);
+}
+
+.footer-logo {
+    height: 90px;
+    /* footer ke liye ideal */
+    width: auto;
+    object-fit: contain;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
