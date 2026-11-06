@@ -19,7 +19,7 @@
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph -->
-   <meta property="og:type" content="website">
+    <meta property="og:type" content="website">
     <meta property="og:site_name" content="InternSpark">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -488,6 +488,8 @@
                         <option>UX/UI Design</option>
                         <option>Android Developer</option>
                         <option>Web Development</option>
+                        <option>AutoCAD</option>
+                        <option>Finance</option>
 
                         <option>Very Large Scale Integration (VLSI)</option>
                         <option>Embedded Systems</option>
@@ -1027,7 +1029,74 @@
                 "Employer Branding and Career Pages", "HR Project Planning", "Midpoint HR Process Case Study",
                 "Process Improvement and Root Cause Analysis", "Stakeholder Communication Practice", "Final HR Project Scope",
                 "Final HR Dashboard or SOP Package", "Final Findings and Recommendations", "Final Presentation and Retrospective"
+            ],
+
+            "AutoCAD": [
+                "Orientation: Internship Goals, Tools & Workflow",
+                "Introduction to AutoCAD and Its Applications",
+                "AutoCAD Interface and Workspace Setup",
+                "Drawing Units and Coordinate Systems",
+                "Basic Drawing Commands",
+                "Line, Circle, Arc and Rectangle Tools",
+                "Object Selection and Editing Commands",
+                "Modify Commands: Move, Copy, Rotate and Scale",
+                "Trim, Extend, Offset and Fillet",
+                "Layers, Colors and Linetypes",
+                "Object Properties and Lineweights",
+                "Hatching and Gradient Tools",
+                "Text, Annotations and Dimensions",
+                "Blocks and Reusable Drawing Elements",
+                "External References and File Management",
+                "Orthographic Drawing and Projection",
+                "2D Floor Plan Design",
+                "Architectural Drawing Fundamentals",
+                "Technical Drawing Standards",
+                "Layouts, Viewports and Plotting",
+                "Introduction to 3D Modeling",
+                "3D Objects and Solid Modeling",
+                "Materials, Views and Visualization",
+                "Drawing Accuracy and Precision",
+                "CAD Standards and Best Practices",
+                "Final Project: Create a Complete CAD Drawing",
+                "Final Project Review and Presentation"
+            ],
+
+            "Finance": [
+                "Orientation: Internship Goals, Tools & Workflow",
+                "Introduction to Finance and Financial Management",
+                "Fundamentals of Accounting",
+                "Understanding Financial Statements",
+                "Balance Sheet Analysis",
+                "Income Statement and Profit & Loss",
+                "Cash Flow Statement Fundamentals",
+                "Revenue, Expenses and Profitability",
+                "Budgeting and Financial Planning",
+                "Financial Forecasting Basics",
+                "Introduction to Financial Ratios",
+                "Working Capital Management",
+                "Accounts Receivable and Payable",
+                "Bank Reconciliation",
+                "Excel for Financial Analysis",
+                "Financial Data Organization and Reporting",
+                "Cost Analysis and Cost Management",
+                "Break-Even Analysis",
+                "Time Value of Money",
+                "Simple and Compound Interest",
+                "Investment Fundamentals",
+                "Risk and Return Analysis",
+                "Capital Budgeting Basics",
+                "Financial Markets and Instruments",
+                "Taxation Fundamentals",
+                "Business Finance and Cash Management",
+                "Financial Modeling in Excel",
+                "Variance Analysis and Performance Tracking",
+                "Financial Reporting and Documentation",
+                "Ethics and Compliance in Finance",
+                "Financial Data Visualization",
+                "Final Project: Financial Analysis and Budget Report",
+                "Final Project Review and Presentation"
             ]
+
         };
 
         // Map common labels to the closest available curriculum.
@@ -1043,7 +1112,9 @@
             "Machine Learning": "Machine Learning",
             "Data Analytics": "Data Analytics",
             "Human Resource (HR)": "Human Resource(HR)",
-            "Human Resource(HR)": "Human Resource(HR)"
+            "Human Resource(HR)": "Human Resource(HR)",
+            "Finance": "Finance",
+            "AutoCAD": "AutoCAD"
         };
 
         /**********************
@@ -1118,7 +1189,7 @@
                     const baseTopic = String(sourceTopics[topicIndex]).replace(/^\d+\.\s*/, "").trim();
                     const phaseLabel = pass < 2 ? "Applied Practice" :
                         pass < 5 ? "Advanced Practice" : pass < 8 ? "Project Integration" :
-                        pass < 11 ? "Quality and Delivery" : "Capstone Extension";
+                            pass < 11 ? "Quality and Delivery" : "Capstone Extension";
                     const candidate = `${phaseLabel} ${pass + 1} — ${baseTopic}: ${format}`;
                     const key = candidate.toLowerCase();
                     if (!seenTopics.has(key)) {
@@ -1144,7 +1215,7 @@
                 }
                 const phase = i < Math.ceil(totalDays * 0.2) ? "Foundation" :
                     i < Math.ceil(totalDays * 0.55) ? "Skill Development" :
-                    i < Math.ceil(totalDays * 0.8) ? "Applied Practice" : "Project & Review";
+                        i < Math.ceil(totalDays * 0.8) ? "Applied Practice" : "Project & Review";
                 currentWeek.entries.push({
                     date: new Date(date),
                     topic: `${String(i + 1).padStart(2, "0")}. ${expandedTopics[i]}`,
@@ -1611,9 +1682,9 @@
             <!-- Bottom Bar -->
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center">
                 <p class="mb-2 mb-md-0 text-secondary small">
-                © 2026 InternSpark | Operated under <a href="https://alfidotech.com">Alfido Tech</a>
-                MSME (Udyam) Registration No: UDYAM-MP-10-0066163
-            </p>
+                    © 2026 InternSpark | Operated under <a href="https://alfidotech.com">Alfido Tech</a>
+                    MSME (Udyam) Registration No: UDYAM-MP-10-0066163
+                </p>
                 <p class="text-secondary small mb-0">
                     Made with ❤️ for learners
                 </p>
